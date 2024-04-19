@@ -1,0 +1,410 @@
+@import "../../../../../styles/global.scss";
+
+.post-tip-modal {
+  width: 100%;
+  min-height: 450px;
+  position: fixed;
+  bottom: 0;
+  z-index: 10000000;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.767);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 400ms ease-out;
+
+  .header-post-tip-modal {
+    width: 100%;
+    min-height: 60px;
+    background-color: #f5f7f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cecece;
+    .left {
+      width: 80%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .team-logos-wrapper {
+        width: 45px;
+        height: 45px;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        img {
+          width: 35%;
+          height: 35%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        :nth-child(1) {
+          transform: translateX(-5px);
+        }
+        :nth-child(2) {
+          transform: translateX(5px);
+        }
+      }
+
+      .left-right-col {
+        width: calc(80% - 45px);
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        .team-names {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 3px;
+          span {
+            font-size: 12px;
+            color: #303030;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+          }
+        }
+
+        .selected-accord-names {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 5px;
+
+          .accord-name,
+          .odd-name {
+            font-size: 12px;
+            color: #303030;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+          }
+
+          .accord-name {
+            text-transform: uppercase;
+            font-size: 11px;
+          }
+          .odd-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #8a8a8a;
+          }
+        }
+      }
+    }
+    .right {
+      width: 20%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      .opened,
+      .close-modal {
+        font-size: 1.5rem;
+        color: #1f1e1d;
+        cursor: pointer;
+        transition: 100ms ease-out;
+        border-radius: 5px;
+      }
+      .opened:active {
+        transform: translateY(1px);
+      }
+      .close-modal:active {
+        transform: translateY(1px);
+      }
+      .opened:hover {
+        background-color: #ffee00;
+        transform: rotate(180deg);
+      }
+      .close-modal:hover {
+        color: #801717;
+      }
+    }
+
+    //if user added long the 1 number odd value tip posted
+    .added-over-length-odd {
+      width: 80%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .wrapper-added-number {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        span {
+          font-weight: bold;
+          position: absolute;
+          color: #1a3150;
+          font-style: italic;
+        }
+      }
+
+      .title {
+        text-transform: uppercase;
+        color: #1a3150;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+  .turnedposttipmodal {
+    background-color: #ffee00;
+    .left .left-right-col .team-names span {
+      color: #1a3150;
+    }
+    .left .left-right-col .selected-accord-names .accord-name {
+      color: #1a3150;
+    }
+    .left .left-right-col .selected-accord-names .odd-name {
+      color: #1a3150;
+    }
+
+    .added-over-length-odd .title {
+      color: #1a3150;
+    }
+    .added-over-length-odd .wrapper-added-number img {
+      filter: grayscale(0.8) brightness(0.8) opacity(0.8);
+    }
+
+    .right .opened {
+      color: #1a3150;
+    }
+    .right .opened:hover {
+      background-color: #fff;
+    }
+    .right .close-modal {
+      display: none;
+    }
+  }
+
+  .content-post-tip-modal {
+    width: 100%;
+    position: relative;
+    height: 315px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 10px;
+    .adding-odd-container {
+      width: 100%;
+      padding: 10px;
+      min-height: 70px;
+      background-color: white;
+      margin-top: 0.4rem;
+      border-bottom: 2px dashed rgba(225, 231, 237, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .left-content {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        .select-value {
+          color: rgba(26, 49, 80, 1);
+          font-weight: 400;
+          font-size: 13px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .category {
+          color: #1a3150;
+          font-size: 13px;
+          font-weight: 500;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .added-match-time-category {
+          color: rgba(111, 140, 170, 1);
+          font-size: 13px;
+          font-weight: 400;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .teams {
+          font-size: 11px;
+          font-weight: 400;
+          color: rgba(26, 49, 80, 1);
+        }
+      }
+
+      .right-value-content-and-icon {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        span {
+          color: rgba(26, 49, 80, 1);
+          font-weight: 500;
+          font-size: 13px;
+          background-color: rgba(245, 247, 249, 1);
+          padding: 6px 13px;
+          border-radius: 5px;
+        }
+        .delete-odd {
+          font-size: 1.3rem;
+          color: rgba(111, 140, 170, 1);
+          cursor: pointer;
+          transition: 100ms ease-out;
+        }
+        .delete-odd:hover {
+          color: #1a3150;
+        }
+        .delete-odd:active {
+          transform: translateY(1px);
+        }
+      }
+    }
+
+    .coefficient-total-count {
+      width: 100%;
+      min-height: 100px;
+      @include flex;
+      flex-direction: column;
+      .title-coef {
+        color: rgba(26, 49, 80, 1);
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .total-count {
+        padding: 5px 15px;
+        background-color: rgb(245, 247, 249);
+        border: 1px solid #cecece40;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+      }
+    }
+
+    input {
+      width: 85%;
+      height: 50px;
+      top: 25rem;
+      resize: none !important;
+      padding: 10px;
+      background-color: #FFFFFF;
+      border: 1px solid #53535340;
+      border-radius: 13px;
+      outline: none;
+      transition: 250ms ease-out;
+    }
+    input::placeholder {
+      text-wrap: wrap;
+      font-size: 10.5px;
+      top: 0.3rem;
+      position: absolute;
+      letter-spacing: -0.1px;
+    }
+    input:hover {
+      cursor: auto;
+      border: 1px solid #ddd017;
+    }
+    
+
+  }
+
+  .bottom-post-tip-modal {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .add-match,
+    .share-tip {
+      transition: 100ms;
+      width: 45%;
+      cursor: pointer;
+      height: 45px;
+      background-color: #ffee00;
+      border-radius: 40px;
+      border: none;
+      outline: none;
+      color: #1a3150;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: -0.7px;
+      text-transform: uppercase;
+      font-style: italic;
+      @include flex;
+      gap: 10px;
+      .icon {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        @include flex;
+        .plus-icon {
+          color: #ffee00;
+        }
+      }
+    }
+    .share-tip {
+      background-color: #1a3150;
+      color: #ffee00;
+    }
+
+    .add-match:hover {
+      background-color: #1a3150;
+      color: #fff;
+    }
+    .add-match:active {
+      transform: translateY(2px);
+    }
+
+    .share-tip:hover {
+      background-color: #e9e9e9;
+      color: #1a3150;
+      border: 1px solid #ffee00;
+    }
+    .share-tip:active {
+      transform: translateY(2px);
+    }
+  }
+}

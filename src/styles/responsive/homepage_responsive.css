@@ -1,0 +1,923 @@
+/* HOMEPAGE CONTENT  */
+@media only screen and (max-width: 1115px) and (min-width: 968px) {
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 80%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 80%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 7%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 50%;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 968px) and (min-width: 768px) {
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 90%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 90%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 50%;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 568px) {
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 90%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 90%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 85%;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 568px) and (min-width: 510px) {
+  .container .homepage .homepage-content .content .bottom-navigation .time {
+    width: 20%;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .left-area {
+    width: 75%;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links {
+    margin: 0.2rem;
+    padding: 6px 20px;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 90%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 90%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 85%;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 510px) and (min-width: 450px) {
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar #selectedtime {
+    display: none;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time {
+    width: 20%;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links > #title-links {
+    font-size: 10px;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .left-area {
+    width: 75%;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links {
+    margin: 0.2rem;
+    padding: 6px 20px;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 90%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 90%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 85%;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 450px) and (min-width: 310px) {
+  .container .homepage .homepage-content .right-sidebar .top-10-title #title {
+    font-size: 13px;
+    text-wrap: nowrap;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation {
+    flex-direction: column;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time {
+    width: 100%;
+    position: relative;
+    background-color: #e1e7ec;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area {
+    width: 100%;
+  }
+
+  .container .homepage .homepage-content .content .header-content .navigation-header-content .links {
+    font-size: 12px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .header-games
+    .left
+    .skewed-right
+    #lig-and-round
+    span {
+    font-size: 9.5px;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+    margin-right: 12.6rem;
+    margin-top: 0.2rem;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time::after {
+    content: "Tarixə görə sırala";
+    position: absolute;
+    right: 1.8rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid #30303069;
+    user-select: none;
+    color: #727171;
+    font-size: 12px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .create-account-afish
+    .afish-wrapper
+    .left {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    :nth-child(2) {
+      display: none;
+    }
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .create-account-afish
+    .afish-wrapper
+    .right {
+    width: 50%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .create-account-afish
+    .afish-wrapper
+    .right:active {
+    background-color: rgb(59, 98, 226);
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar #selectedtime {
+    font-size: 11px;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links > #title-links {
+    font-size: 10px;
+  }
+  .container .homepage .homepage-content .content .header-content .head .right span {
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links {
+    margin: 0.2rem;
+    padding: 6px 20px;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 98%;
+    margin-top: 1rem;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 40px;
+    height: 40px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 100%;
+    overflow: hidden;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .name-country #country {
+    font-size: 10px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .right .top #profit-count,
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .right .top #tip-count {
+    font-size: 12px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .name-country #name {
+    font-size: 11px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 60%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info .time {
+    flex-direction: column;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info .text {
+    font-size: 10px;
+    width: 90%;
+    overflow: hidden;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .top-title-news span {
+    font-size: 20px;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .carousel-inner
+    .carousel
+    .content-carousel
+    .teams-and-others
+    .teams {
+    height: 178px;
+    * {
+      font-size: 12px !important;
+    }
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .carousel-inner
+    .carousel
+    .content-carousel
+    .teams-and-others
+    .others
+    .coefficient
+    span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .carousel .slide img {
+    width: 20px;
+    height: 20px;
+  }
+  .container .homepage .homepage-content .right-sidebar .carousel-inner .carousel .control-dots {
+    display: none;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .register-banner-container .content-banner .box .banner {
+    width: 50px;
+    overflow: hidden;
+    height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .container .homepage .homepage-content .right-sidebar .register-banner-container .content-banner .box .left span {
+    font-size: 11px;
+    text-wrap: nowrap;
+    letter-spacing: -0.8px;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container {
+    min-height: 335px;
+    background-size: 300%;
+    justify-content: space-evenly;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .socialmedia-title {
+    text-wrap: wrap;
+    font-size: 17px;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .icon-container {
+    flex-wrap: wrap;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .icon-container .icons {
+    margin-left: 0.3rem;
+    a {
+      width: 37px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .container .homepage .homepage-content .right-sidebar .register-banner-container .content-banner .register-button {
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .register-banner-container
+    .content-banner
+    .register-button
+    button {
+    width: 100%;
+  }
+  .container .homepage .homepage-content .right-sidebar {
+    width: 100%;
+    padding: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 310px) and (min-width: 268px) {
+  .container .homepage .homepage-content .right-sidebar .top-10-title #title {
+    font-size: 13.5px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today {
+    display: none;
+  }
+  .container .homepage .homepage-content .content .header-content .navigation-header-content .links {
+    font-size: 12px;
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .header-games
+    .left
+    .skewed-right
+    #lig-and-round
+    span {
+    font-size: 9.5px;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar #selectedtime {
+    display: none;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time {
+    width: 20%;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .time .icon-calendar {
+    background-color: transparent;
+    width: 100%;
+    border-radius: unset;
+    box-shadow: unset;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links > #title-links {
+    font-size: 11px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .header-games {
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation {
+    height: 150px;
+  }
+  .container .homepage .homepage-content .content .bottom-navigation .left-area {
+    width: 75%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .create-account-afish
+    .afish-wrapper
+    .left {
+    display: none;
+  }
+
+  .container .homepage .homepage-content .content .bottom-navigation .left-area .links {
+    padding: 5px 70px;
+  }
+  .container .homepage .homepage-content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .container .homepage .homepage-content .left-sidebar {
+    display: none;
+  }
+  .container .homepage .homepage-content .content {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar {
+    width: 100%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .games-wrapper
+    .games-container
+    .game
+    .content-games
+    .games
+    .scores {
+    left: 9rem;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients {
+    border-right: none;
+    width: 13%;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .top-title img {
+    width: 33px;
+    height: 33px;
+    transform: skew(20deg);
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .active-cups-today
+    .cupons
+    .left-coefficients
+    .coefficient
+    span {
+    font-size: 14px;
+  }
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+    height: 70px;
+    border-radius: 10px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .active-cups-today .cupons .center-teams {
+    flex-direction: column-reverse;
+  }
+
+  .container .homepage .homepage-content .content .header-content .head .right span {
+    display: none;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile img {
+    width: 20px;
+    height: 20px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .profile #level {
+    font-size: 9px;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .news .news-photo img {
+    display: none;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .news {
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top {
+    width: 100%;
+    overflow: hidden;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .name-country #country {
+    display: none;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .name-country #country {
+    font-size: 8px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .right .top #profit-count,
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .right .top #tip-count {
+    font-size: 10px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .user-top .left .name-country #name {
+    font-size: 9px;
+  }
+  .container .homepage .homepage-content .right-sidebar .top10-analisers .top-10-selector .selector {
+    width: 100%;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info .time {
+    flex-direction: column;
+    margin-right: 5rem;
+    width: 100%;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info .time .left {
+    width: 100%;
+  }
+  .container .homepage .homepage-content .right-sidebar .register-banner-container .content-banner .box .banner {
+    display: none;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .right-sidebar
+    .register-banner-container
+    .content-banner
+    .register-button
+    button {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .icon-container {
+    flex-direction: column;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .news .info .text {
+    font-size: 10px;
+    width: 90%;
+    overflow: hidden;
+    margin-right: 5rem;
+  }
+  .container .homepage .homepage-content .right-sidebar .news-container .top-title-news span {
+    font-size: 20px;
+  }
+
+  .container .homepage .homepage-content .right-sidebar .social-media-container {
+    min-height: auto;
+    background-image: none;
+    flex-wrap: wrap;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .icon-container {
+    flex-wrap: wrap;
+  }
+  .container .homepage .homepage-content .right-sidebar .social-media-container .connector span {
+    display: none;
+  }
+}
+/* HOMEPAGE CONTENT  */

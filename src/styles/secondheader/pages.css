@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper,
+body .wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper-isPopup,
+body .wrapper-isPopup {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.emoji-modal-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 50%;
+  height: 330px;
+  position: relative;
+  margin-top: 0.5rem;
+  left: 45.5%;
+  border-radius: 15px;
+  background-color: #292744;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.emoji-modal-container .header {
+  border-bottom: 1px solid #f5ef44;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.emoji-modal-container .header span {
+  color: white;
+  font-size: 13px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.emoji-modal-container .header #closeicon {
+  font-size: 2rem;
+  color: rgb(211, 77, 77);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.emoji-modal-container .header #closeicon:hover {
+  transform: scale(1.1);
+}
+.emoji-modal-container .header #closeicon:active {
+  transform: translateY(1px);
+}
+.emoji-modal-container .emojies {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.emoji-modal-container .emojies .loading-anim {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-modal-container .emojies .loading-anim #rectangle1 {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji-modal-container .emojies span {
+  font-size: 1.7rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.emoji-modal-container .emojies span:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  background-color: rgb(47, 42, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: mediumslateblue;
+}
+
+.wrapper-basketball, .wrapper-basketball, .wrapper-tennis, .wrapper-volleyball, .wrapper-handball {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.wrapper-basketball .navigation-top, .wrapper-basketball .navigation-top, .wrapper-tennis .navigation-top, .wrapper-volleyball .navigation-top, .wrapper-handball .navigation-top {
+  margin-top: 1.3rem;
+  width: 100%;
+  height: 35px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.wrapper-basketball .navigation-top #nav-title, .wrapper-basketball .navigation-top #nav-title, .wrapper-tennis .navigation-top #nav-title, .wrapper-volleyball .navigation-top #nav-title, .wrapper-handball .navigation-top #nav-title {
+  color: #706e82;
+  font-size: 12px;
+  margin-left: 7rem;
+}
+.wrapper-basketball .navigation-top img, .wrapper-basketball .navigation-top img, .wrapper-tennis .navigation-top img, .wrapper-volleyball .navigation-top img, .wrapper-handball .navigation-top img {
+  width: auto;
+  height: auto;
+  margin-right: 0.3rem;
+}/*# sourceMappingURL=pages.css.map */

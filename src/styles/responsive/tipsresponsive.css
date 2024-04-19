@@ -1,0 +1,293 @@
+@media only screen and (max-width: 1200px) and (min-width: 968px) {
+     .tips-container .tips-wrapper {
+          width: 100%;
+          align-items: center;
+          flex-direction: column;
+     }    
+
+     .tips-container .tips-wrapper .filters-container {
+          display: none;
+     }
+
+     .tips-container .tips-wrapper .cupons-container {
+          width: 95%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar {
+          width: 80%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar .top10-analisers {
+          width: 60%;
+     }
+
+}
+
+@media only screen and (max-width: 968px) and (min-width: 768px) {
+     .tips-container {
+          overflow-x: hidden;
+     }
+     .tips-container .tips-wrapper {
+          width: 100%;
+          align-items: center;
+          flex-direction: column;
+     }    
+
+     .tips-container .tips-wrapper .filters-container {
+          display: none;
+     }
+
+     .tips-container .tips-wrapper .cupons-container {
+          width: 95%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar {
+          width: 80%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar .top10-analisers {
+          width: 60%;
+     }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 568px) {
+     .tips-container {
+          overflow-x: hidden;
+     }
+     .tips-container .tips-wrapper {
+          width: 100%;
+          align-items: center;
+          flex-direction: column;
+     }    
+
+     .tips-container .tips-wrapper .filters-container {
+          display: none;
+     }
+
+     .tips-container .tips-wrapper .cupons-container {
+          width: 100%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar {
+          width: 100%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar .top10-analisers {
+          width: 80%;
+     }
+
+}
+
+@media only screen and (max-width: 568px) and (min-width: 456px) {
+     .tips-container {
+          overflow-x: hidden;
+     }
+     .tips-container .tips-wrapper {
+          width: 100%;
+          align-items: center;
+          flex-direction: column;
+     }    
+
+     .tips-container .tips-wrapper .filters-container {
+          display: none;
+     }
+
+     .tips-container .tips-wrapper .cupons-container {
+          width: 95%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar {
+          width: 100%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar .top10-analisers {
+          width: 100%;
+     }
+
+}
+
+@media only screen and (max-width: 456px) and (min-width: 290px) {
+     .tips-container .tips-wrapper .cupons-container .filtered-area {
+          width: 100%;
+          flex-direction: column;
+     }
+     .tips-container .tips-wrapper .cupons-container .filtered-area .search-input-area {
+          width: 100%;
+          height: auto;
+     }
+     .tips-container .tips-wrapper .cupons-container .filtered-area .search-input-area input {
+          height: 35px;
+     }
+     .tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area {
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area .filtericon {
+          width: 30px;
+          height: 30px;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o {
+          margin-top: 3rem;
+          width: 100%;
+     }
+
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header {
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user {
+          width: 100%;
+          height: auto;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .right-time {
+          width: 100%;
+          height: auto;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 1rem;
+     
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container {
+          padding: 0;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess {
+          width: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient {
+          flex-direction: column;
+          justify-content: center;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient {
+          width: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams {
+          *{
+               font-size: 9.5px !important;
+          }
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient {
+          width: 100%;
+          height: 30px;
+          margin-top: 1rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .share #shareicon {
+          font-size: 1.2rem;
+          position: absolute;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage {
+          width: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container {
+          padding: 0;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header {
+          flex-direction: column;
+          height: auto;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .right-time {
+          width: 100%;
+          margin-top: 0.5rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user {
+          width: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient {
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient {
+          width: 100%;
+        
+          height: auto;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams{
+          *{
+               font-size: 8.5px;
+          }
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient {
+          width: 100%;
+          height: 30px;
+          margin-top: 0.7rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .right-coefficient-area .coefficient-total-count {
+          width: 100%;
+          height: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter {
+          height: auto;
+     }
+     .tips-container .tips-wrapper .right-sidebar .news-container .news .news-photo img {
+          display: none;
+     }
+     .tips-container .tips-wrapper .right-sidebar .news-container .news .info {
+          width: 100%;
+          margin-right: 4rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .navigator {
+          width: 100%;
+     }
+     .tips-container .tips-wrapper .cupons-container .navigator .links {
+          width: 100%;
+          font-size: 11.5px;
+          letter-spacing: -0.5px;
+          height: 70%;
+     }
+     .tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer {
+          width: 100%;
+          min-height: 100px;
+          position: relative;
+          flex-direction: column;
+     }
+     .tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con {
+          width: 100%;
+          margin-top: 2rem;
+          margin-right: 2rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con #title {
+          font-size: 15px;
+          padding-right: 5rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer #headertit {
+          font-size: 15px;
+          text-wrap: nowrap;
+          position: relative;
+          bottom: 2.2rem;
+     }
+     .tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer button {
+          position: absolute;
+          top: 0rem;
+          left: 0;
+          width: 95%;
+     }
+     .tips-container {
+          overflow-x: hidden;
+     }
+     .tips-container .tips-wrapper {
+          width: 100%;
+          align-items: center;
+          flex-direction: column;
+     }    
+
+     .tips-container .tips-wrapper .filters-container {
+          display: none;
+     }
+
+     .tips-container .tips-wrapper .cupons-container {
+          width: 95%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar {
+          width: 100%;
+     }
+
+     .tips-container .tips-wrapper .right-sidebar .top10-analisers {
+          width: 100%;
+     }
+
+}

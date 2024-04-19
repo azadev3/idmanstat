@@ -1,0 +1,842 @@
+@import "../global.scss";
+
+.add-tipmodal-container {
+  width: 24%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 55px 2px rgb(0, 0, 0, 0.5);
+  border-radius: 5px;
+  z-index: 10000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  animation: right_to_left 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards normal;
+  @keyframes right_to_left {
+    from {
+      transform: translateX(20rem);
+    }
+    to {
+      transform: translateX(0rem);
+    }
+  }
+
+  .header-add-tipmodal {
+    width: 100%;
+    height: 65px;
+    background-color: #292744;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    #lefticon {
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.1s ease-out;
+    }
+    #lefticon:hover {
+      background-color: #fff;
+      color: black;
+    }
+    span {
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    #closemodalicon {
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.1s ease-out;
+    }
+    #closemodalicon:hover {
+      background-color: white;
+      color: black;
+    }
+    #closemodalicon:active {
+      transform: translateY(1px);
+    }
+  }
+
+  .search-area {
+    margin-top: 1rem;
+    width: 100%;
+    height: 45px;
+    @include flex;
+    .input-search {
+      width: 90%;
+      height: 45px;
+      @include flex;
+      position: relative;
+      input[type="search"] {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding-left: 3rem;
+        padding-right: 1rem;
+        background-color: yellow;
+        font-weight: 500;
+        color: #292744;
+        font-size: 14px;
+      }
+      input[type="search"]::placeholder {
+        color: #706e82 !important;
+      }
+      #searchicon {
+        position: absolute;
+        left: 0.7rem;
+        font-size: 1.5rem;
+        color: #706e82;
+      }
+    }
+  }
+
+  .popular-lig-container {
+    width: 100%;
+    height: 80.5%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .toptitle {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      span {
+        color: #292744;
+        font-weight: 700;
+        font-size: 17px;
+      }
+    }
+
+    .ligs-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      .title {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+          margin-left: 1rem;
+          font-size: 12.5px;
+          color: #706e82;
+        }
+      }
+
+      .ligs {
+        width: 100%;
+        height: 429px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        .list {
+          width: 91%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          .list-ligs {
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            height: 40px;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img {
+              width: 7%;
+            }
+            span {
+              font-size: 13px;
+              font-weight: 500;
+              margin-left: 0.3rem;
+              color: #292744;
+            }
+          }
+          .list-ligs:hover {
+            background-color: rgb(255, 255, 124);
+          }
+
+          .dont-result-msg {
+            width: 100%;
+            height: 300px;
+            @include flex;
+            span {
+              font-size: 1.1rem;
+              font-weight: 600;
+              letter-spacing: -0.7px;
+              color: #292744;
+              animation: opacity 1s ease-out alternate infinite;
+            }
+          }
+        }
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .selected-league-container {
+    width: 100%;
+    height: 80.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .selected-league-name {
+      width: 90%;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 1rem;
+
+      .image-wrapper {
+        width: 50px;
+        height: 50px;
+        @include flex;
+        position: relative;
+        border-radius: 50%;
+        img {
+          position: absolute;
+          object-fit: cover;
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .name-and-type {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        span {
+          margin-left: 1rem;
+        }
+        #type {
+          font-size: 13px;
+          font-weight: 500;
+          color: #6f8caa;
+        }
+        #selected-league {
+          font-size: 14.5px;
+          font-weight: 600;
+          letter-spacing: -0.8px;
+          color: #292744;
+        }
+      }
+    }
+
+    .match-status {
+      width: 100%;
+      height: 415px;
+      overflow-y: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .match-area {
+        width: 90%;
+        height: auto;
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        transition: 0.1s ease-out;
+
+        .date-header {
+          width: 100%;
+          height: 30px;
+          background-color: #ffee00;
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 0.7rem;
+            font-size: 14px;
+            font-weight: 500;
+            color: #303030;
+          }
+        }
+
+        .matchs {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          border-bottom: 1px solid #ffee00;
+          .matchtime {
+            width: 70px;
+            min-height: 60px;
+            @include flex;
+            span {
+              color: #706e82;
+              font-size: 13px;
+            }
+          }
+
+          .teams {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+              @include flex;
+              span {
+                margin-left: 0.7rem;
+                font-size: 13.5px;
+              }
+
+              .img-wrapper {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                @include flex;
+                position: relative;
+
+                img {
+                  margin-left: 0.5rem;
+                  position: absolute;
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .match-area:hover {
+        background-color: #ffee005b;
+      }
+    }
+  }
+
+  .match-informations-container {
+    width: 100%;
+    height: 89.7%;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .information-header {
+      width: 100%;
+      min-height: 200px;
+      background-image: url(/stadium.svg);
+      background-position: center;
+      background-repeat: repeat;
+      @include flex;
+
+      .teams-header {
+        width: 90%;
+        height: 90%;
+        @include flex;
+
+        .teamleft-info,
+        .teamright-info {
+          word-break: break-all;
+          overflow: hidden;
+          width: 30%;
+          height: 100%;
+          @include flex;
+          flex-direction: column;
+          cursor: pointer;
+          .teamlogo-wrapper {
+            width: 60px;
+            height: 60px;
+            @include flex;
+            position: relative;
+            border-radius: 50%;
+            img {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+
+          span {
+            text-align: center;
+            padding: 0.5rem;
+            color: #fff;
+            font-size: 11px;
+            letter-spacing: -0.3px;
+          }
+        }
+
+        .teamstatus-info {
+          width: 40%;
+          height: 100%;
+          @include flex;
+          flex-direction: column;
+
+          .after-time {
+            width: 100%;
+            height: auto;
+            @include flex;
+            span {
+              color: white;
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
+
+          .time {
+            width: 100%;
+            height: auto;
+            @include flex;
+            span {
+              color: #fff;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .match-bottom-informations {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .odds-section {
+        width: 100%;
+        height: 60px;
+        margin-top: 1rem;
+        background-color: white;
+        @include flex;
+        .odds {
+          width: 80%;
+          height: 100%;
+          @include flex;
+
+          .all-match,
+          .first-half,
+          .second-half {
+            width: 35%;
+            height: 43px;
+            border: 1px solid #f7e70e;
+            @include flex;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.1s ease-out;
+            span {
+              font-size: 13px;
+              word-break: normal;
+              font-weight: 500;
+            }
+          }
+          .all-match:hover {
+            background-color: #ffee008a;
+          }
+          .first-half:hover {
+            background-color: #ffee008a;
+          }
+          .second-half:hover {
+            background-color: #ffee008a;
+          }
+        }
+      }
+    }
+
+    .navigation-on-odds {
+      overflow-y: auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .accordion-content {
+        margin-top: 0.5rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: 0.1s ease-out;
+
+        .accordion-header {
+          user-select: none;
+          width: 100%;
+          min-height: 45px;
+          background-color: #ffee00;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+
+          span {
+            color: #303030;
+            font-size: 13.6px;
+            font-weight: 500;
+            margin-left: 1rem;
+          }
+
+          #open-the-accordion,
+          #close-the-accordion {
+            color: #292744;
+            font-size: 1rem;
+            margin-right: 1rem;
+            animation: transformed_icon 0.2s ease-out forwards normal;
+            @keyframes transformed_icon {
+              from {
+                transform: rotate(160deg);
+              }
+              to {
+                transform: rotate(0deg);
+              }
+            }
+          }
+        }
+        .accordion-header:hover {
+          background-color: #fff671;
+        }
+      }
+      
+
+      .active-accordion {
+        background-color: rgba(42, 39, 68, 0.062745098);
+        min-height: 100px;
+        transition: 0.1s ease-out all;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .according-main {
+          margin-top: 0.5rem;
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .odds-wrapper,.odds-title {
+            width: 100%;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            .odds-home, .odds-x, .odds-2 {
+              margin-bottom: 2rem;
+              cursor: pointer;
+              transition: 0.1s ease-out;
+              width: 80px;
+              height: 50px;
+              border: 1px solid #cececea9;
+              border-radius: 10px;
+              @include flex;
+            }
+
+            .home-away-wrapper {
+              width: 100%;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              .values-home-away-draw {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                span {
+                  padding: 5px 15px;
+                  background-color: #ffffff;
+                  border-radius: 5px;
+                  color: #292744;
+                  font-weight: 500;
+                  border: 1px solid #2927443d;
+                  cursor: pointer;
+                  transition: 50ms ease-out;
+                  user-select: none;
+                }
+                span:hover {
+                  background-color: rgb(219, 255, 228);
+                }
+                span:active {
+                  transform: translateY(2px);
+                }
+              }
+            }
+          
+            .span {
+              text-align: center;
+              padding: 5px 15px;
+              background-color: #ffffff;
+              border-radius: 5px;
+              color: #292744;
+              font-weight: 500;
+              border: 1px solid rgba(41, 39, 68, 0.2392156863);
+              cursor: pointer;
+              transition: 50ms ease-out;
+              user-select: none;
+            }
+            .span:hover {
+              background-color: rgb(219, 255, 228);
+            }
+            .span:active {
+              transform: translateY(2px);
+            }
+
+          }
+
+          .odds-title {
+            width: 100%;
+            height: auto;
+            .odds-home, .odds-x, .odds-2 {
+              margin-bottom: 0;
+              cursor: auto;
+              border: none;
+              height: 30px !important;
+              background-color: transparent;
+              span {
+                font-size: 13px;
+                color: #000;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: -0.3px;
+                width: 100%;
+                height: 100%;
+                @include flex;
+              }
+            }
+            .odds-home:hover {background: transparent;}
+            .odds-x:hover {background: transparent;}
+            .odds-2:hover {background: transparent;}
+          }
+
+        }
+
+        
+      //  .top-goals-odd {
+      //   width: 100%;
+      //   min-height: 100px;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: flex-start;
+      //   flex-direction: column;
+      //   .header-over-under {
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: flex-end;
+      //     gap: 40px;
+      //     padding-right: 40px;
+      //     width: 100%;
+      //     min-height: 50px;
+      //     span {
+      //       text-transform: capitalize;
+      //       font-size: 15px;
+      //       font-weight: 500;
+      //     }
+      //   }
+
+      //   .odd-item {
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: space-around;
+      //     width: 100%;
+      //     min-height: 50px;
+
+      //     .odd-name {
+      //       padding: 5px 15px;
+      //       background-color: #ffffff;
+      //       border-radius: 5px;
+      //       color: #292744;
+      //       font-weight: 500;
+      //       border: 1px solid #2927443d;
+      //       cursor: pointer;
+      //       transition: 50ms ease-out;
+      //       user-select: none;
+      //     }
+      //     .odd-name:hover {
+      //       background-color: rgb(219, 255, 228);
+      //     }
+      //     .odd-name:active {
+      //       transform: translateY(2px);
+      //     }
+
+      //     .odd-name-name {
+      //       padding: 5px 15px;
+      //       background-color: #ffffff52;
+      //       border-radius: 5px;
+      //       color: #292744da;
+      //       font-weight: 500;
+      //       user-select: none;
+      //     }
+      //   }
+
+         
+      //  }
+
+      .over-under-odds {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .left, .over-container, .under-container {
+          width: 33.3%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          .over_oddname, .under_oddname, .oddname {
+            text-transform: capitalize;
+            font-size: 14px;
+            margin-top: 1rem;
+            font-weight: 500;
+            padding: 5px 45px;
+          }
+
+          .odd, .odd-no {
+            margin-top: 0.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            padding: 5px 25px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            color: #292744;
+            font-size: 13.5px;
+            font-weight: 500;
+            border: 1px solid rgba(41, 39, 68, 0.2392156863);
+            cursor: pointer;
+            transition: 50ms ease-out;
+            user-select: none;
+          }
+          .odd:hover {
+            background-color: rgb(219, 255, 228);
+          }
+          .odd:active {
+            transform: translateY(2px);
+          }
+          .odd-no {
+            background-color: transparent !important;
+            cursor: auto;
+            border: 1px solid #cecece60;
+          }
+        }
+
+      }
+
+       .both-team-score, .double-chance {
+        width: 100%;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .value-1x-12-2x, 
+        .value-yes-no {
+          margin-top: 0.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+          span {
+            text-transform: capitalize;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 5px 45px;
+          }
+        }
+
+
+        .odds-bts, .odds-dc {
+          margin-top: 0.2rem;
+          margin-bottom: 0.7rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          span {
+            text-align: center;
+            padding: 5px 45px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            color: #292744;
+            font-weight: 500;
+            border: 1px solid rgba(41, 39, 68, 0.2392156863);
+            cursor: pointer;
+            transition: 50ms ease-out;
+            user-select: none;
+          }
+          span:hover {
+            background-color: rgb(219, 255, 228);
+          }
+          span:active {
+            transform: translateY(2px);
+          }
+        }
+
+
+        .odds-dc > span {
+          padding: 5px 20px;
+        }
+
+       }
+       .double-chance {
+        margin-bottom: 1rem;
+       }
+
+       
+
+
+      }
+    }
+    
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+  }
+  ::-webkit-scrollbar {display: none;}
+}

@@ -1,0 +1,241 @@
+.responsive-footer-component {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  background-color: #292744;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .footer-container-responsive {
+    width: 98%;
+    min-height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .about-our-box,
+    .fast-links-box,
+    .news-box,
+    .contact-box {
+      width: 25%;
+      min-height: 290px;
+      background-color: #292744;
+      margin-left: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 3rem;
+      flex-direction: column;
+      .title {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 1rem;
+        span {
+          color: #fff;
+        }
+      }
+
+      .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        p {
+          color: #ffffff70;
+          font-size: 11px;
+          margin-top: 1rem;
+          padding: 7px;
+        }
+      }
+
+      .links {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+        #links-in-footer {
+          text-decoration: none;
+          margin-top: 1rem;
+          font-size: 11px;
+          color: #ffffff70;
+        }
+      }
+
+      .contents-in-news-box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        .wrapper-one {
+          margin-top: 1rem;
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .img-wrapper {
+            width: 70px;
+            height: auto;
+            background-color: red;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .texts {
+            width: 100%;
+            height: auto;
+            padding-left: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            span {
+              text-decoration: none;
+              margin-top: 0.2rem;
+              font-size: 11px;
+              color: #ffffff70;
+            }
+          }
+        }
+      }
+
+      .contact-content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        .location,
+        .telephone,
+        .mail {
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            margin-top: 1rem;
+            font-size: 10.5px;
+            color: #ffffff70;
+            position: relative;
+            left: 0.4rem;
+          }
+          #contact-icons {
+               color: #fff;
+               font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-foot {
+    width: 100%;
+    min-height: 50px;
+    background-color: #272a2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left, .right {
+     width: 50%;
+     height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+
+     img {
+          width: 130px;
+          height: auto;
+     }
+     span {
+          margin-left: 0.5rem;
+          font-size: 11px;
+          color: #ffffff70;
+     }
+     #idmanstat-priv {
+          margin-left: 1rem;
+          margin-top: 0.2rem;
+     }
+    }
+  }
+}
+
+//responsive footer media queries
+@media only screen and (max-width: 568px) and (min-width: 368px) {
+     .responsive-footer-component .footer-container-responsive {
+          flex-direction: column;
+     }
+     
+     .responsive-footer-component .footer-container-responsive .about-our-box, .responsive-footer-component .footer-container-responsive .fast-links-box, .responsive-footer-component .footer-container-responsive .news-box, .responsive-footer-component .footer-container-responsive .contact-box {
+          width: 100%;
+          min-height: 150px;
+          align-items: center;
+          justify-content: flex-start;
+     }
+     .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .news-box .contact-content .location, .responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .news-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .location, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail {
+          justify-content: flex-start;
+          margin-top: 1rem;
+     }
+     .responsive-footer-component .footer-container-responsive .about-our-box .content, .responsive-footer-component .footer-container-responsive .fast-links-box .content, .responsive-footer-component .footer-container-responsive .news-box .content, .responsive-footer-component .footer-container-responsive .contact-box .content {
+          align-items: flex-start;
+     }
+     .responsive-footer-component .footer-foot {
+          margin-top: 3rem;
+          * {
+               font-size: 10px !important;
+               text-wrap: nowrap;
+          }
+     }
+     .responsive-footer-component .footer-foot  {
+          flex-direction: column;
+     }
+}
+@media only screen and (max-width: 368px) and (min-width: 168px) {
+     .responsive-footer-component .footer-container-responsive {
+          flex-direction: column;
+     }
+     
+     .responsive-footer-component .footer-container-responsive .about-our-box, .responsive-footer-component .footer-container-responsive .fast-links-box, .responsive-footer-component .footer-container-responsive .news-box, .responsive-footer-component .footer-container-responsive .contact-box {
+          width: 100%;
+          min-height: 150px;
+          align-items: center;
+          justify-content: flex-start;
+     }
+     .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .news-box .contact-content .location, .responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .news-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .location, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail {
+          justify-content: flex-start;
+          margin-top: 1rem;
+     }
+     .responsive-footer-component .footer-container-responsive .about-our-box .content, .responsive-footer-component .footer-container-responsive .fast-links-box .content, .responsive-footer-component .footer-container-responsive .news-box .content, .responsive-footer-component .footer-container-responsive .contact-box .content {
+          align-items: flex-start;
+     }
+     .responsive-footer-component .footer-foot {
+          margin-top: 3rem;
+          * {
+               font-size: 10px !important;
+               text-wrap: nowrap;
+          }
+     }
+     .responsive-footer-component .footer-foot  {
+          flex-direction: column;
+     }
+}

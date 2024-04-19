@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper,
+body .wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper-isPopup,
+body .wrapper-isPopup {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.emoji-modal-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 50%;
+  height: 330px;
+  position: relative;
+  margin-top: 0.5rem;
+  left: 45.5%;
+  border-radius: 15px;
+  background-color: #292744;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.emoji-modal-container .header {
+  border-bottom: 1px solid #f5ef44;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.emoji-modal-container .header span {
+  color: white;
+  font-size: 13px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.emoji-modal-container .header #closeicon {
+  font-size: 2rem;
+  color: rgb(211, 77, 77);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.emoji-modal-container .header #closeicon:hover {
+  transform: scale(1.1);
+}
+.emoji-modal-container .header #closeicon:active {
+  transform: translateY(1px);
+}
+.emoji-modal-container .emojies {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.emoji-modal-container .emojies .loading-anim {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-modal-container .emojies .loading-anim #rectangle1 {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji-modal-container .emojies span {
+  font-size: 1.7rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.emoji-modal-container .emojies span:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  background-color: rgb(47, 42, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: mediumslateblue;
+}
+
+.events-container {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.events-container .firsthalf-results, .events-container .secondhalf-results {
+  width: 100%;
+  margin-top: 0.5rem;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.events-container .firsthalf-results .firsthalfhead, .events-container .firsthalf-results .secondhalfhead, .events-container .secondhalf-results .firsthalfhead, .events-container .secondhalf-results .secondhalfhead {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.events-container .firsthalf-results .firsthalfhead span, .events-container .firsthalf-results .secondhalfhead span, .events-container .secondhalf-results .firsthalfhead span, .events-container .secondhalf-results .secondhalfhead span {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: whitesmoke;
+}
+.events-container .firsthalf-results .firsthalf-contents, .events-container .firsthalf-results .secondhalf-contents, .events-container .secondhalf-results .firsthalf-contents, .events-container .secondhalf-results .secondhalf-contents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+  background-color: whitesmoke;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .home, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .home, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .home, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .home {
+  position: relative;
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .home span, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .home span, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .home span, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .home span {
+  font-size: 11px;
+  font-weight: 500;
+  padding-left: 0.7rem;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .home img, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .home img, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .home img, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .home img {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 1rem;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .home #minutes, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .home #minutes, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .home #minutes, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .home #minutes {
+  font-weight: 700;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .away, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .away, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .away, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .away {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .away span, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .away span, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .away span, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .away span {
+  font-size: 11px;
+  font-weight: 500;
+  padding-right: 0.7rem;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .away img, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .away img, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .away img, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .away img {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 1rem;
+}
+.events-container .firsthalf-results .firsthalf-contents .statuses-on-users .away #minutes, .events-container .firsthalf-results .secondhalf-contents .statuses-on-users .away #minutes, .events-container .secondhalf-results .firsthalf-contents .statuses-on-users .away #minutes, .events-container .secondhalf-results .secondhalf-contents .statuses-on-users .away #minutes {
+  font-weight: 700;
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  left: 18rem;
+  top: 0.4rem;
+  z-index: 10000;
+  width: 200px;
+  min-height: 20px;
+  background-color: gold;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaled 0.2s ease-out forwards normal;
+}
+@keyframes scaled {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.tooltip-wrapper span {
+  font-size: 10px;
+  font-weight: 500;
+  color: #000;
+}/*# sourceMappingURL=navigators.css.map */

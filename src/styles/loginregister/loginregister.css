@@ -1,0 +1,690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper,
+body .wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper-isPopup,
+body .wrapper-isPopup {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.emoji-modal-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 50%;
+  height: 330px;
+  position: relative;
+  margin-top: 0.5rem;
+  left: 45.5%;
+  border-radius: 15px;
+  background-color: #292744;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.emoji-modal-container .header {
+  border-bottom: 1px solid #f5ef44;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.emoji-modal-container .header span {
+  color: white;
+  font-size: 13px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.emoji-modal-container .header #closeicon {
+  font-size: 2rem;
+  color: rgb(211, 77, 77);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.emoji-modal-container .header #closeicon:hover {
+  transform: scale(1.1);
+}
+.emoji-modal-container .header #closeicon:active {
+  transform: translateY(1px);
+}
+.emoji-modal-container .emojies {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.emoji-modal-container .emojies .loading-anim {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-modal-container .emojies .loading-anim #rectangle1 {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji-modal-container .emojies span {
+  font-size: 1.7rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.emoji-modal-container .emojies span:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  background-color: rgb(47, 42, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: mediumslateblue;
+}
+
+.modal-wrapper {
+  width: 35%;
+  height: 585px;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  border-radius: 10px;
+  border: 1px solid #cecece;
+  position: fixed;
+  transform: translate(85%, 3.5%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .modal-head {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  text-decoration: none;
+}
+.modal-wrapper .modal-head li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #292744;
+  background-color: rgba(206, 206, 206, 0.3764705882);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  border-radius: 3px;
+}
+.modal-wrapper .modal-head li:hover {
+  background-color: rgba(206, 206, 206, 0.3568627451);
+}
+.modal-wrapper .login-container {
+  width: 100%;
+  height: 485px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .title {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-wrapper .login-container .title span {
+  color: #292744;
+  font-weight: 700;
+  font-size: 20px;
+}
+.modal-wrapper .login-container .form {
+  width: 100%;
+  height: 405px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .form .field-areas {
+  width: 100%;
+  height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .form .field-areas .field {
+  width: 80%;
+  height: 105px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .form .field-areas .field input {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(232, 240, 254);
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  margin-top: 0.3rem;
+}
+.modal-wrapper .login-container .form .field-areas .field input:focus {
+  border: 2px solid rgba(61, 55, 143, 0.4235294118);
+}
+.modal-wrapper .login-container .form .field-areas .field input:hover {
+  background-color: rgba(183, 204, 241, 0.473);
+}
+.modal-wrapper .login-container .form .field-areas .field label {
+  color: #292744;
+  font-weight: 600;
+  font-size: 13.8px;
+  letter-spacing: -0.2px;
+}
+.modal-wrapper .login-container .form .field-areas .field .label-pass {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+.modal-wrapper .login-container .form .field-areas .field .label-pass .primary-forgot-password {
+  font-size: 13.8px;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: #6961dd;
+}
+.modal-wrapper .login-container .form .field-areas .field #err-msg {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e20227;
+  font-size: 13px;
+  padding-left: 0.5rem;
+}
+.modal-wrapper .login-container .form .buttons-and-more {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button {
+  width: 80%;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button #primaryLoginBtn {
+  width: 100%;
+  height: 50px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  background-color: #292744;
+  color: white;
+  font-weight: 700;
+  font-size: 17.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button #primaryLoginBtn:hover {
+  background-color: #ffffff;
+  color: #292744;
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button #primaryLoginBtn:active {
+  transform: translateY(2px);
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button .loading-anim {
+  width: 100%;
+  height: 50px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  background-color: #292744;
+  color: white;
+  font-weight: 700;
+  font-size: 17.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-wrapper .login-container .form .buttons-and-more .primary-login-button .loading-anim #rectangle1 {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal-wrapper .login-container .form .buttons-and-more .additional-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.modal-wrapper .login-container .form .buttons-and-more .additional-title span {
+  color: #292744;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 0.5rem;
+}
+.modal-wrapper .login-container .form .buttons-and-more .additional-options {
+  width: 1005;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .login-container .form .buttons-and-more .additional-options #additional-link {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #292744;
+  margin-top: 0.3rem;
+  padding: 3px 10px;
+  border-radius: 10px;
+  transition: 0.1s ease-out;
+}
+.modal-wrapper .login-container .form .buttons-and-more .additional-options #additional-link:hover {
+  background-color: #292744;
+  color: #fff;
+}
+.modal-wrapper .register-container {
+  width: 100%;
+  height: 485px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .title {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .title h2 {
+  font-size: 22px;
+  transform: skewX(-10deg);
+  font-weight: bold;
+  color: #292744;
+}
+.modal-wrapper .register-container .title p {
+  color: #6f8caa;
+  font-weight: 500;
+  font-size: 11px;
+  width: 100%;
+  height: 100%;
+  padding: 0.1rem;
+  text-align: center;
+}
+.modal-wrapper .register-container .form {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .form .field-areas {
+  width: 100%;
+  height: 220px;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .form .field-areas .field {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .form .field-areas .field input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(232, 240, 254);
+  padding-left: 1rem;
+  padding-right: 3.5rem;
+  margin-top: 0.3rem;
+}
+.modal-wrapper .register-container .form .field-areas .field input:focus {
+  border: 2px solid rgba(61, 55, 143, 0.4235294118);
+}
+.modal-wrapper .register-container .form .field-areas .field input:hover {
+  background-color: rgba(183, 204, 241, 0.473);
+}
+.modal-wrapper .register-container .form .field-areas .field label {
+  color: #292744;
+  font-weight: 600;
+  font-size: 13.8px;
+  letter-spacing: -0.2px;
+}
+.modal-wrapper .register-container .form .field-areas .field .label-pass {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+.modal-wrapper .register-container .form .field-areas .field .label-pass .primary-forgot-password {
+  font-size: 13.8px;
+  text-decoration: none;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: #6961dd;
+}
+.modal-wrapper .register-container .form .field-areas .field #open-eyes {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.6rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.modal-wrapper .register-container .form .field-areas .field #open-eyes:hover {
+  background-color: whitesmoke;
+}
+.modal-wrapper .register-container .form .field-areas .field #open-eyes:active {
+  transform: translateY(2px);
+}
+.modal-wrapper .register-container .form .field-areas .field #close-eyes {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.6rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.modal-wrapper .register-container .form .field-areas .field #close-eyes:hover {
+  background-color: whitesmoke;
+}
+.modal-wrapper .register-container .form .field-areas .field #close-eyes:active {
+  transform: translateY(2px);
+}
+.modal-wrapper .register-container .form .field-areas .checkbox-field {
+  width: 79%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.modal-wrapper .register-container .form .field-areas .checkbox-field .rules-check,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .promotions-check {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.modal-wrapper .register-container .form .field-areas .checkbox-field .rules-check #rules-checkbox,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .rules-check #promotions-checkbox,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .promotions-check #rules-checkbox,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .promotions-check #promotions-checkbox {
+  width: 20px;
+  height: 20px;
+}
+.modal-wrapper .register-container .form .field-areas .checkbox-field .rules-check span,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .promotions-check span {
+  width: 95%;
+  height: auto;
+  font-size: 12.5px;
+  text-align: start;
+  padding-left: 0.5rem;
+}
+.modal-wrapper .register-container .form .field-areas .checkbox-field .rules-check span #rules-link,
+.modal-wrapper .register-container .form .field-areas .checkbox-field .promotions-check span #rules-link {
+  padding: 5px 5px;
+  text-decoration: none;
+  color: #f33c59;
+}
+.modal-wrapper .register-container .form .additional-titles {
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-wrapper .register-container .form .additional-titles .primary-register-button {
+  width: 80%;
+  height: 45px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.modal-wrapper .register-container .form .additional-titles .primary-register-button #primaryRegisterBtn {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border: 2.5px solid rgba(211, 211, 10, 0.397);
+  outline: none;
+  background-color: rgba(41, 39, 68, 0.1529411765);
+  color: rgb(163, 163, 163);
+  font-weight: 700;
+  font-size: 17.5px;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  transition: 0.1s ease-out;
+}
+.modal-wrapper .register-container .form .additional-titles .primary-register-button .loading-anim {
+  width: 100%;
+  height: 50px;
+  border-radius: 13px;
+  border: none;
+  outline: none;
+  background-color: #292744;
+  color: white;
+  font-weight: 700;
+  font-size: 17.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-wrapper .register-container .form .additional-titles .primary-register-button .loading-anim #rectangle1 {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal-wrapper .register-container .form .additional-titles .activeBtn {
+  background-color: #292744 !important;
+  cursor: pointer !important;
+  border: 2.5px solid rgb(211, 211, 10) !important;
+  color: white !important;
+}
+.modal-wrapper .register-container .form .additional-titles .activeBtn:hover {
+  background-color: transparent !important;
+  border: 3px solid #292744 !important;
+  color: #292744 !important;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title #addition-login-link {
+  color: #f33c59;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title-social-media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title-social-media #addition-social-media-title {
+  font-size: 13px;
+  transform: skewX(-15deg);
+  color: #292744;
+  font-weight: 700;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title-social-media #addition-social-media-title:after {
+  content: "----------";
+  color: #f33c59;
+}
+.modal-wrapper .register-container .form .additional-titles .additional-title-social-media #addition-social-media-title::before {
+  content: "----------";
+  color: #f33c59;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts {
+  width: 95%;
+  height: 27%;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-facebook,
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-google {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s all;
+  width: 75%;
+  height: 100%;
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid #e1e7ed;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-facebook span,
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-google span {
+  font-size: 13.5px;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-facebook:hover {
+  background-color: #292744;
+  color: white;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-facebook:active {
+  transform: translateY(1px);
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-google:hover {
+  background-color: #2fb165;
+  color: white;
+}
+.modal-wrapper .register-container .form .additional-titles .login-in-social-media-accounts .login-to-google:active {
+  transform: translateY(1px);
+}
+.modal-wrapper .register-container .form #err-msg {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: red;
+  font-size: 11.5px;
+  padding-left: 0.5rem;
+}/*# sourceMappingURL=loginregister.css.map */

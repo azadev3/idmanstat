@@ -1,0 +1,2445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper,
+body .wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper-isPopup,
+body .wrapper-isPopup {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.emoji-modal-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 50%;
+  height: 330px;
+  position: relative;
+  margin-top: 0.5rem;
+  left: 45.5%;
+  border-radius: 15px;
+  background-color: #292744;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.emoji-modal-container .header {
+  border-bottom: 1px solid #f5ef44;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.emoji-modal-container .header span {
+  color: white;
+  font-size: 13px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.emoji-modal-container .header #closeicon {
+  font-size: 2rem;
+  color: rgb(211, 77, 77);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.emoji-modal-container .header #closeicon:hover {
+  transform: scale(1.1);
+}
+.emoji-modal-container .header #closeicon:active {
+  transform: translateY(1px);
+}
+.emoji-modal-container .emojies {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.emoji-modal-container .emojies .loading-anim {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-modal-container .emojies .loading-anim #rectangle1 {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji-modal-container .emojies span {
+  font-size: 1.7rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.emoji-modal-container .emojies span:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  background-color: rgb(47, 42, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: mediumslateblue;
+}
+
+.tips-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tips-container .navigation-top {
+  margin-top: 1.3rem;
+  width: 100%;
+  height: 35px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tips-container .navigation-top #nav-title {
+  color: #706e82;
+  font-size: 12px;
+  margin-left: 7rem;
+}
+.tips-container .navigation-top img {
+  width: auto;
+  height: auto;
+  margin-right: 0.3rem;
+}
+.tips-container .tips-wrapper {
+  margin-top: 1rem;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.tips-container .tips-wrapper .carousel .thumbs-wrapper,
+.tips-container .tips-wrapper .carousel .axis-vertical {
+  display: none;
+}
+.tips-container .tips-wrapper .carousel .control-dots {
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .carousel .control-dots li {
+  background-color: #252e4e;
+  margin-bottom: 1rem;
+}
+.tips-container .tips-wrapper .carousel button {
+  position: absolute;
+  top: 24.7rem;
+  z-index: 1000;
+  color: #dbd644;
+  background-color: #292744;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.tips-container .tips-wrapper .carousel .content-carousel {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .top-title {
+  width: 100%;
+  height: 50px;
+  background-color: #f5ef44;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .top-title span {
+  font-weight: bold;
+  font-size: 15px;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others {
+  background-color: #f5f7f9;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .left {
+  width: 30%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .left img {
+  width: 60%;
+  height: 60%;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .left span {
+  color: #292744;
+  font-size: 14px;
+  text-align: center;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .time {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .time strong {
+  color: #292744;
+  font-size: 1.6rem;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .time span {
+  color: #817f91;
+  font-size: 0.8rem;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .right {
+  width: 30%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .right img {
+  width: 60%;
+  height: 60%;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .teams .right span {
+  color: #292744;
+  font-size: 14px;
+  text-align: center;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .others {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .others .coefficient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 100%;
+  border: 1px solid #6f8caa;
+  border-radius: 25px;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .others .coefficient span {
+  margin-right: 1.5rem;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .ligname {
+  width: 100%;
+  height: 25px;
+  position: relative;
+  top: 0.7rem;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .teams-and-others .ligname span {
+  color: #706E82;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .sponsor {
+  width: 100%;
+  height: 40px;
+  background-color: #292744;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .sponsor .logo {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .sponsor .logo img {
+  width: 100%;
+  height: 100%;
+  margin-right: 2rem;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .sponsor .logo #box {
+  width: 10%;
+  position: absolute;
+  right: 1rem;
+}
+.tips-container .tips-wrapper .carousel .content-carousel .sponsor span {
+  font-size: 13px;
+  margin-left: 1.5rem;
+}
+.tips-container .tips-wrapper .right-sidebar {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  width: 35%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  bottom: 0rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner {
+  width: 100%;
+  height: 450px;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .thumbs-wrapper,
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .axis-vertical {
+  display: none;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .control-dots {
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .control-dots li {
+  background-color: #252e4e;
+  margin-bottom: 1rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel button {
+  position: absolute;
+  top: 24.7rem;
+  z-index: 1000;
+  color: #dbd644;
+  background-color: #292744;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .top-title {
+  width: 100%;
+  height: 50px;
+  background-color: #f5ef44;
+  border-radius: 15px 15px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .top-title span {
+  font-weight: bold;
+  font-size: 15px;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others {
+  background-color: #f5f7f9;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .left {
+  width: 30%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .left img {
+  width: 60%;
+  height: 60%;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .left span {
+  color: #292744;
+  font-size: 14px;
+  text-align: center;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .time {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .time strong {
+  color: #292744;
+  font-size: 1.6rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .time span {
+  color: #817f91;
+  font-size: 0.8rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .right {
+  width: 30%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .right img {
+  width: 60%;
+  height: 60%;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .teams .right span {
+  color: #292744;
+  font-size: 14px;
+  text-align: center;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .others {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .others .coefficient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 100%;
+  border: 1px solid #6f8caa;
+  border-radius: 25px;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .others .coefficient span {
+  margin-right: 1.5rem;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .ligname {
+  width: 100%;
+  height: 25px;
+  position: relative;
+  top: 0.7rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .teams-and-others .ligname span {
+  color: #706E82;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .sponsor {
+  width: 100%;
+  height: 40px;
+  background-color: #292744;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .sponsor .logo {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .sponsor .logo img {
+  width: 100%;
+  height: 100%;
+  margin-right: 2rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .sponsor .logo #box {
+  width: 10%;
+  position: absolute;
+  right: 1rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel .content-carousel .sponsor span {
+  font-size: 13px;
+  margin-left: 1.5rem;
+}
+.tips-container .tips-wrapper .right-sidebar .carousel-inner .carousel-status {
+  display: none;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today {
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .top-title {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .top-title span {
+  color: #252e4e;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .top-title img {
+  transform: skewX(20deg);
+  margin-left: 0.5rem;
+  width: 7%;
+  height: auto;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons {
+  width: 100%;
+  height: 100px;
+  background-color: #f5f7f9;
+  margin: 0.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .left-coefficients {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.337254902);
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient {
+  width: 90%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #292744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .left-coefficients .coefficient span {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 11px;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .left-team,
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .right-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .left-team span,
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .right-team span {
+  color: #817474;
+  font-size: 11px;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .center-timedate {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .top .center-timedate span {
+  font-size: 10.5px;
+  color: #706e82;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .game-result {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .center-teams .game-result span {
+  color: #252e4e;
+  font-size: 15px;
+  font-weight: 700;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .right-play-button {
+  border-left: 1px solid rgba(0, 0, 0, 0.337254902);
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .right-play-button button {
+  cursor: pointer;
+  width: 80%;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background-color: #252e4e;
+  color: white;
+}
+.tips-container .tips-wrapper .right-sidebar .active-cups-today .cupons .right-play-button button:hover {
+  background-color: white;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .right-sidebar .top-10-title {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .top-10-title #rectangle {
+  width: 25%;
+  border: 1px dashed rgba(0, 0, 0, 0.384);
+}
+.tips-container .tips-wrapper .right-sidebar .top-10-title #title {
+  color: #252e4e;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers {
+  width: 100%;
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .top-10-selector {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .top-10-selector .selector {
+  box-shadow: 0px 0px 2px 0px rgba(76, 74, 87, 0.336);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 13.5px;
+  width: 96%;
+  height: 90%;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 8px;
+  color: #252e4e;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("/top10profile/arrowdown.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #F5F7F9;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .top-10-selector .selector option {
+  background-color: rgba(188, 202, 255, 0.4784313725);
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .top-10-selector .selector:hover {
+  border: 1px solid #a8bafc;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .top-10-selector .selector:focus {
+  border: 2px solid #4d71f5;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top {
+  background-image: url(/back2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s all;
+  cursor: pointer;
+  width: 93%;
+  height: 90px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top #user-num {
+  position: absolute;
+  top: 0.5rem;
+  left: -0.5rem;
+  background-color: #dbd644;
+  padding: 1px 7px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  transform: skewX(-10deg);
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .profile img {
+  width: 45%;
+  height: auto;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .profile #level {
+  font-size: 11.5px;
+  font-weight: 500;
+  background-color: #f5ef44;
+  padding: 0.6px 5px;
+  border-radius: 7px;
+  margin-top: 0.3rem;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .name-country {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .name-country #name {
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+  height: auto;
+  color: #f5ef44;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .name-country #name:hover {
+  text-decoration: underline;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .left .name-country #country {
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: 12px;
+  color: #f5ef44;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .top {
+  width: 95%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .top #profit-count,
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .top #tip-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #292744;
+  transform: skewX(10deg);
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .bottom {
+  width: 95%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .bottom #profit,
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top .right .bottom #tip {
+  color: #706e82;
+  font-size: 12.5px;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .user-top:hover {
+  border: 3px solid #FEDE3A;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .show-more {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .show-more button {
+  transition: 0.1s ease-out;
+  width: 100%;
+  height: 60%;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  color: #292744;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #f5ef44;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .show-more button:hover {
+  background-color: #292744;
+  color: #fff;
+}
+.tips-container .tips-wrapper .right-sidebar .top10-analisers .show-more button:active {
+  transform: translateY(2px);
+}
+.tips-container .tips-wrapper .right-sidebar .news-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fff;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .top-title-news {
+  width: 100%;
+  height: 30px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .top-title-news span {
+  color: #252e4e;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .top-title-news .all {
+  text-decoration: none;
+  font-size: 14px;
+  color: #292744;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  min-height: 150px;
+  background-color: #f5f7f9;
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .news-photo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .news-photo img {
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  margin-left: 0.6rem;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info {
+  width: 70%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .text {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11.5px;
+  padding: 15px;
+  font-weight: 500;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .time {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .time .left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .time .left #time {
+  font-size: 11px;
+  color: #817474;
+  margin-left: 0.3rem;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .time .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news .info .time .right span {
+  color: #817474;
+  font-size: 11px;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .news:hover {
+  border: 1px solid rgba(129, 127, 145, 0.1529411765);
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .show-more {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .show-more button {
+  cursor: pointer;
+  width: 95%;
+  height: 55%;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background-color: #f5f7f9;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #252e4e;
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .show-more button:hover {
+  background-color: rgba(245, 239, 68, 0.1294117647);
+}
+.tips-container .tips-wrapper .right-sidebar .news-container .show-more button:active {
+  transform: translateY(2px);
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container {
+  margin-top: 1rem;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 380px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .top-title-banner {
+  width: 100%;
+  height: 40px;
+  background-color: #f5ef44;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .top-title-banner span {
+  color: #252e4e;
+  font-weight: 700;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner {
+  width: 100%;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .box {
+  width: 50%;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .box .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .box .left strong {
+  color: #252e4e;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .box .left span {
+  font-size: 10.8px;
+  color: #6f8caa;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .box .banner {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .register-button {
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .register-button button {
+  width: 60%;
+  height: 65%;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #f5ef44;
+  background-color: #292744;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .register-button button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #cecece;
+}
+.tips-container .tips-wrapper .right-sidebar .register-banner-container .content-banner .register-button button:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container {
+  width: 100%;
+  height: 230px;
+  background-image: url("/socialmediaicons/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .socialmedia-title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .icon-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .icon-container .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .icon-container .icons img {
+  transition: 0.1s all;
+  cursor: pointer;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .icon-container .icons img:hover {
+  transform: scale(1.2);
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .connector {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .right-sidebar .social-media-container .connector span {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+.tips-container .tips-wrapper .filters-container {
+  background-color: white;
+  width: 25%;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .filters-container .title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tips-container .tips-wrapper .filters-container .title #filter-icon {
+  color: #1a3150;
+  font-size: 1.3rem;
+}
+.tips-container .tips-wrapper .filters-container .title span {
+  color: #1a3150;
+  margin-left: 0.5rem;
+}
+.tips-container .tips-wrapper .filters-container .country-filter {
+  width: 95%;
+  min-height: 300px;
+  margin-top: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background-color: #f5ef44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .title span {
+  margin-left: 0.5rem;
+  color: #1a3150;
+  font-weight: 600;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .title #down {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .title:hover {
+  border: 1px solid rgba(26, 49, 80, 0.5568627451);
+}
+.tips-container .tips-wrapper .filters-container .country-filter .title:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .filters-container .country-filter .filter-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .filter-box li {
+  width: 100%;
+  color: #706e82;
+  font-size: 13px;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .filter-box li:hover {
+  background-color: rgba(112, 110, 130, 0.1568627451);
+}
+.tips-container .tips-wrapper .filters-container .country-filter .filter-box #check-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  color: #1a3150;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .filters-container .country-filter .close {
+  display: none;
+}
+.tips-container .tips-wrapper .filters-container .cupons {
+  width: 95%;
+  min-height: 170px;
+  margin-top: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .cupons .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background-color: #f5ef44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .cupons .title span {
+  margin-left: 0.5rem;
+  color: #1a3150;
+  font-weight: 600;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .filters-container .cupons .title #down {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.tips-container .tips-wrapper .filters-container .cupons .title:hover {
+  border: 1px solid rgba(26, 49, 80, 0.5568627451);
+}
+.tips-container .tips-wrapper .filters-container .cupons .title:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .filters-container .cupons .cupons-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .cupons .cupons-box li {
+  width: 100%;
+  color: #706e82;
+  font-size: 13px;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .filters-container .cupons .cupons-box li:hover {
+  background-color: rgba(112, 110, 130, 0.1568627451);
+}
+.tips-container .tips-wrapper .filters-container .cupons .cupons-box #check-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  color: #1a3150;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .filters-container .cupons .close {
+  display: none;
+}
+.tips-container .tips-wrapper .filters-container .coefficients {
+  width: 95%;
+  min-height: 100px;
+  margin-top: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background-color: #f5ef44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .title span {
+  margin-left: 0.5rem;
+  color: #1a3150;
+  font-weight: 600;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .title #down {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .title:hover {
+  border: 1px solid rgba(26, 49, 80, 0.5568627451);
+}
+.tips-container .tips-wrapper .filters-container .coefficients .title:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .coefficient-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .coefficient-box .left-cof,
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .coefficient-box .right-cof {
+  margin: 1.5rem;
+  width: 30%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #f5ef44;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .coefficient-box .left-cof input,
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .coefficient-box .right-cof input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .selector {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .selector input[type=range] {
+  width: 35%;
+  margin: 1rem;
+  height: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: #292744;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .filters-container .coefficients .select-container .selector input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #6244e9;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(42, 109, 209, 0.966);
+}
+.tips-container .tips-wrapper .filters-container .coefficients .close {
+  display: none;
+}
+.tips-container .tips-wrapper .filters-container .statuses {
+  width: 95%;
+  min-height: 300px;
+  margin-top: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .statuses .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background-color: #f5ef44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .statuses .title span {
+  margin-left: 0.5rem;
+  color: #1a3150;
+  font-weight: 600;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .filters-container .statuses .title #down {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.tips-container .tips-wrapper .filters-container .statuses .title:hover {
+  border: 1px solid rgba(26, 49, 80, 0.5568627451);
+}
+.tips-container .tips-wrapper .filters-container .statuses .title:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .filters-container .statuses .cupons-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .statuses .cupons-box li {
+  width: 100%;
+  color: #706e82;
+  font-size: 13px;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .filters-container .statuses .cupons-box li:hover {
+  background-color: rgba(112, 110, 130, 0.1568627451);
+}
+.tips-container .tips-wrapper .filters-container .statuses .cupons-box #check-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  color: #1a3150;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .filters-container .statuses .close {
+  display: none;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings {
+  width: 95%;
+  min-height: 150px;
+  margin-top: 1rem;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  background-color: #f5ef44;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .title span {
+  margin-left: 0.5rem;
+  color: #1a3150;
+  font-weight: 600;
+  font-size: 15px;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .title #down {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .title:hover {
+  border: 1px solid rgba(26, 49, 80, 0.5568627451);
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .title:active {
+  transform: translateY(3px);
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .cupons-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .cupons-box li {
+  width: 100%;
+  color: #706e82;
+  font-size: 13px;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .cupons-box li:hover {
+  background-color: rgba(112, 110, 130, 0.1568627451);
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .cupons-box #check-icon {
+  position: absolute;
+  right: 1rem;
+  top: 0.8rem;
+  color: #1a3150;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .filters-container .author-reytings .close {
+  display: none;
+}
+.tips-container .tips-wrapper .cupons-container {
+  margin-top: 2rem;
+  width: 48%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-right: 2px solid #f5f7f9;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer {
+  width: 93%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer #headertit {
+  color: #1a3150;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: -0.8px;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con {
+  width: 150px;
+  height: 100%;
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con #title {
+  font-size: 11.2px;
+  margin-right: 0.2rem;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con #rectangle {
+  border: 1px solid #303030;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 25px;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #e1e7ed;
+  position: relative;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con #rectangle .switch {
+  transition: 0.1s all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(209, 209, 209);
+  position: absolute;
+  left: 0.2rem;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer .switch-con #rectangle .opened {
+  transition: 0.1s all;
+  position: relative;
+  left: 0.8rem;
+  background-color: rebeccapurple;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer button {
+  cursor: pointer;
+  transition: 0.1s all;
+  width: 27%;
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: #1a3150;
+  color: #f5ef44;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  border: 1px solid #00b1ff;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer button #plusicon {
+  font-size: 11px;
+  position: relative;
+  right: 0.5rem;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer button:hover {
+  background-color: transparent;
+  border: 1px solid #1a3150;
+  color: black;
+}
+.tips-container .tips-wrapper .cupons-container .topheader-cuponcontainer button:active {
+  transform: translateY(2px);
+}
+.tips-container .tips-wrapper .cupons-container .navigator {
+  margin-top: 1.5rem;
+  width: 93%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .navigator .links {
+  border: 1px solid #292744;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 3px;
+  width: 50%;
+  height: 75%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a3150;
+  font-weight: 500;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+.tips-container .tips-wrapper .cupons-container .navigator .links:hover {
+  background-color: #1a3150;
+  color: #fff;
+}
+.tips-container .tips-wrapper .cupons-container .navigator .links:active {
+  transform: translateY(1px);
+}
+.tips-container .tips-wrapper .cupons-container .navigator .li1 {
+  background-color: #1a3150;
+  color: white;
+}
+.tips-container .tips-wrapper .cupons-container .navigator .li2 {
+  background-color: #1a3150;
+  color: white;
+}
+.tips-container .tips-wrapper .cupons-container .navigator .li3 {
+  background-color: #1a3150;
+  color: white;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area {
+  margin-top: 1.5rem;
+  width: 93%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .search-input-area {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .search-input-area input {
+  width: 100%;
+  height: 70%;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  padding-left: 2.1rem;
+  padding-right: 1rem;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .search-input-area #searchicon {
+  position: absolute;
+  left: 0.5rem;
+  font-size: 1.3rem;
+  color: rgba(26, 49, 80, 0.7411764706);
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area #queued {
+  font-size: 13px;
+  color: #706e82;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area #best-liked {
+  font-size: 12px;
+  color: #706e82;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(206, 206, 206, 0.231372549);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area .filtericon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(206, 206, 206, 0.231372549);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area .filtericon #filter {
+  color: #1a3150;
+  font-size: 1.4rem;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area .filtericon:hover {
+  border: 1px solid #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .filtered-area .right-filter-area .filtericon:active {
+  transform: translateY(2px);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o {
+  margin-top: 1.5rem;
+  width: 97%;
+  height: auto;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container {
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 0.8rem;
+  width: 100%;
+  height: auto;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header {
+  width: 95%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.4rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user img {
+  margin-left: 0.5rem;
+  padding: 6px 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #1a3150;
+  width: auto;
+  height: auto;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips #username {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips .tips {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips .tips #minus-tip {
+  color: rgb(255, 0, 0);
+  font-weight: 400;
+  font-size: 12.5px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips .tips #tip {
+  position: relative;
+  color: #706e82;
+  font-size: 12.5px;
+  padding-left: 1rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .left-user .username-and-tips .tips #tip #rectangle {
+  position: absolute;
+  left: 0.4rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  bottom: -0.1rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .right-time {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0.4rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .right-time #time {
+  font-size: 13px;
+  color: #706e82;
+  font-weight: 500;
+  margin-right: 0.7rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .right-time #moreicon {
+  cursor: pointer;
+  color: #1a3150;
+  font-size: 1.5rem;
+  transition: 0.1s all;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-header .right-time #moreicon:hover {
+  transform: scale(1.2);
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess {
+  width: 95%;
+  padding: 0.5rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient {
+  width: 100%;
+  border: 1px solid rgba(206, 206, 206, 0.4392156863);
+  padding: 0.2rem;
+  border-radius: 15px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(206, 206, 206, 0.4392156863);
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container #img1 {
+  margin-bottom: 0.1rem;
+  width: 70%;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container #img2 {
+  margin-top: 0.1rem;
+  width: 70%;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles {
+  width: 80%;
+  height: 100%;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams {
+  width: 100%;
+  height: 50%;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams #team1,
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams #team2 {
+  color: #706e82;
+  font-size: 12.1px;
+  padding: 7px;
+  letter-spacing: -0.5px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams strong {
+  color: #706e82;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .total-goals {
+  width: 100%;
+  height: 50%;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .total-goals #totalgoalstitle {
+  color: #1a3150;
+  font-size: 12.5px;
+  padding: 7px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient {
+  width: 10%;
+  height: 40px;
+  background-color: #1a3150;
+  border-radius: 10px;
+  transition: 0.1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient span {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient:hover {
+  cursor: help;
+  transform: scale(1.1);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment {
+  width: 95%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .likes {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.9rem;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .likes #disslikeicon {
+  transition: 0.1s all;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .likes #likeicon {
+  transition: 0.1s all;
+  cursor: pointer;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .likes #likeicon:hover {
+  color: #1a3150;
+  transform: scale(1.2);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .likes #disslikeicon:hover {
+  color: #1a3150;
+  transform: scale(1.2);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .comment {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .comment #commenticon {
+  color: #706e82;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .comment #commenticon:hover {
+  color: #1a3150;
+  transform: scale(1.1);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .comment span {
+  color: #706e82;
+  font-size: 14.2px;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  border-left: 1px solid rgba(112, 110, 130, 0.2862745098);
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .share #shareicon {
+  font-size: 1.3rem;
+  color: #706e82;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .cupons-container .container-t-o .user-guess-container .user-cupon-and-guess .like-and-comment .comment-and-share .share #shareicon:hover {
+  color: #1a3150;
+  transform: scale(1.1);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage {
+  margin-top: 1.5rem;
+  width: 97%;
+  height: auto;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container {
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 0.8rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment {
+  width: 95%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .likes {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.9rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .likes #disslikeicon {
+  transition: 0.1s all;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .likes #likeicon {
+  transition: 0.1s all;
+  cursor: pointer;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .likes #likeicon:hover {
+  color: #1a3150;
+  transform: scale(1.2);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .likes #disslikeicon:hover {
+  color: #1a3150;
+  transform: scale(1.2);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .comment {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .comment #commenticon {
+  color: #706e82;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .comment #commenticon:hover {
+  color: #1a3150;
+  transform: scale(1.1);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .comment span {
+  color: #706e82;
+  font-size: 14.2px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  border-left: 1px solid rgba(112, 110, 130, 0.2862745098);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .share #shareicon {
+  font-size: 1.3rem;
+  color: #706e82;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .like-and-comment .comment-and-share .share #shareicon:hover {
+  color: #1a3150;
+  transform: scale(1.1);
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.4rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user img {
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #1a3150;
+  width: auto;
+  height: auto;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips #username {
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips .tips {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips .tips #minus-tip {
+  color: rgb(255, 0, 0);
+  font-weight: 400;
+  font-size: 12.5px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips .tips #tip {
+  position: relative;
+  color: #706e82;
+  font-size: 12.5px;
+  padding-left: 1rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .left-user .username-and-tips .tips #tip #rectangle {
+  position: absolute;
+  left: 0.4rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  bottom: -0.1rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .right-time {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0.4rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .right-time #time {
+  font-size: 13px;
+  color: #706e82;
+  font-weight: 500;
+  margin-right: 0.7rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .right-time #moreicon {
+  cursor: pointer;
+  color: #1a3150;
+  font-size: 1.5rem;
+  transition: 0.1s all;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .user-header .right-time #moreicon:hover {
+  transform: scale(1.2);
+  color: #1a3150;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border: 1px solid rgba(56, 53, 124, 0.2196078431);
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .left-counter-area {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .left-counter-area .imgwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: auto;
+  position: relative;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .left-counter-area .imgwrap span {
+  position: absolute;
+  top: 0;
+  left: 0.3rem;
+  color: white;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .left-counter-area #titlecupon {
+  font-weight: 500;
+  font-size: 15px;
+  color: #292744;
+  margin-left: 0.7rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .right-coefficient-area {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .right-coefficient-area .coefficient-total-count {
+  width: 66px;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 250, 0.473);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .right-coefficient-area .coefficient-total-count #count {
+  font-size: 15px;
+  color: #292744;
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .top-cupon-counter .right-coefficient-area .coefficient-total-count #title {
+  background-color: lavender;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess {
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(206, 206, 206, 0.4392156863);
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container #img1 {
+  margin-bottom: 0.1rem;
+  width: 70%;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .image-container #img2 {
+  margin-top: 0.1rem;
+  width: 70%;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles {
+  width: 80%;
+  height: 100%;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams {
+  width: 100%;
+  height: 50%;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams #team1,
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams #team2 {
+  color: #706e82;
+  font-size: 12.1px;
+  padding: 7px;
+  letter-spacing: -0.5px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .teams strong {
+  color: #706e82;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .total-goals {
+  width: 100%;
+  height: 50%;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .left-area-cupon-and-coefficient .titles .total-goals #totalgoalstitle {
+  color: #1a3150;
+  font-size: 12.5px;
+  padding: 7px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient {
+  width: 10%;
+  height: 40px;
+  background-color: #1a3150;
+  border-radius: 10px;
+  transition: 0.1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient span {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+.tips-container .tips-wrapper .cupons-container .cupons-in-tipspage .user-guess-container .cupons-area .user-cupon-and-guess .cupon-and-coefficient .right-area-cupon-and-coefficient:hover {
+  cursor: help;
+  transform: scale(1.1);
+}/*# sourceMappingURL=tips.css.map */

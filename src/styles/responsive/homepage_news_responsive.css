@@ -1,0 +1,278 @@
+@media only screen and (max-width: 568px) and (min-width: 368px) {
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items {
+    width: 100%;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .right-titles
+    .news-title
+    span {
+    font-size: 11.5px;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .news-image-container {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap {
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment {
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .like-and-comment {
+    justify-content: center;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .please-write-comment-input
+    .input {
+    border: 1px solid mediumslateblue;
+    border-radius: 15px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .news-content-pg-main
+    p {
+    font-size: 12.5px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .news-image-container
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 368px) and (min-width: 268px) {
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items {
+    width: 100%;
+    margin-top: 3.5rem;
+  }
+  .container .homepage .homepage-content .content .live-games-content .news-container-in-main-page .container-newspage .top-title-news span {
+     font-size: 1.6rem;
+     top: 3.5rem;
+     left: 0.5rem;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .right-titles
+    .news-title
+    span {
+    font-size: 11.5px;
+    display: inline-block;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .news-image-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap {
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment {
+    width: 100%;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .like-and-comment {
+    justify-content: center;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .please-write-comment-input
+    .input {
+    border: 1px solid mediumslateblue;
+    border-radius: 15px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .add-comment
+    .news-content-pg-main
+    p {
+    font-size: 12.5px;
+  }
+  .container
+    .homepage
+    .homepage-content
+    .content
+    .live-games-content
+    .news-container-in-main-page
+    .container-newspage
+    .news-items
+    .news-wrap
+    .news
+    .news-image-container
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+  .container .homepage .homepage-content .content .live-games-content .news-container-in-main-page .container-newspage .news-items .news-wrap {
+     margin-top: 0.3rem;
+  }
+
+  .container .homepage .homepage-content .content .live-games-content .news-container-in-main-page .container-newspage .news-items .news-wrap .news {
+     flex-direction: column;
+     min-height: 300px;
+
+}
+.container .homepage .homepage-content .content .live-games-content .news-container-in-main-page .container-newspage .news-items .news-wrap .news .news-image-container {
+     width: 100%;
+     height: 150px;
+     margin-bottom: 0.6rem;
+}
+.container .homepage .homepage-content .content .live-games-content .news-container-in-main-page .container-newspage .news-items .news-wrap .news .right-titles {
+     width: 100%;
+     height: auto;
+}
+}

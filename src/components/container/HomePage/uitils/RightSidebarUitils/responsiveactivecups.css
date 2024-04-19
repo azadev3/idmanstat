@@ -1,0 +1,206 @@
+.responsive-active-cupons {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.responsive-active-cupons .title-active-cupons {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.responsive-active-cupons .title-active-cupons img {
+  width: 25px;
+  height: 25px;
+  margin-left: 0.5rem;
+}
+.responsive-active-cupons .title-active-cupons span {
+  padding-left: 0.5rem;
+  color: #252e4e;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px;
+}
+.responsive-active-cupons .cupons-container {
+  width: 100%;
+  min-height: 100px;
+  background-color: #F5F7F9;
+  margin-top: 1rem;
+  border: 1px solid #F0F0F0;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .title-match-result {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .title-match-result span {
+  color: #292744;
+  font-weight: 700;
+  font-size: 14px;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .left-team {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .left-team img {
+  width: 25px;
+  height: 25px;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .left-team span {
+  font-size: 13px;
+  color: #000000;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .center-statuses {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .center-statuses span {
+  font-size: 10px;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .right-team {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .right-team img {
+  width: 25px;
+  height: 25px;
+}
+.responsive-active-cupons .cupons-container .left-cupon-area .center-teams .right-team span {
+  font-size: 13px;
+  color: #000000;
+}
+.responsive-active-cupons .cupons-container .right-cupon-area {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .coefficient {
+  width: 35%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #292744;
+  border-radius: 2px;
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .coefficient #title {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .coefficient #coefficient_title {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(237, 234, 253);
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .play-btn {
+  width: 55%;
+  position: relative;
+  left: 0.3rem;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #252e4e;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .play-btn:hover {
+  background-color: rgb(21, 175, 59);
+  transform: skewX(-7deg);
+}
+.responsive-active-cupons .cupons-container .right-cupon-area .play-btn:active {
+  transform: translateX(1rem);
+}
+
+@media only screen and (max-width: 500px) and (min-width: 368px) {
+  .cupons-container {
+    flex-direction: column;
+  }
+  .left-cupon-area {
+    width: 100%;
+  }
+  .responsive-active-cupons .cupons-container .left-cupon-area {
+    width: 100%;
+  }
+  .responsive-active-cupons .cupons-container .right-cupon-area {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 368px) and (min-width: 268px) {
+  .cupons-container {
+    flex-direction: column;
+  }
+  .responsive-active-cupons .title-active-cupons span {
+    text-wrap: nowrap;
+    font-size: 14px;
+  }
+  .responsive-active-cupons .cupons-container .left-cupon-area .title-match-result span {
+    font-size: 13px;
+  }
+  .responsive-active-cupons .cupons-container .right-cupon-area .coefficient {
+    width: 25%;
+    height: 40px;
+  }
+  .responsive-active-cupons .cupons-container .right-cupon-area .coefficient * {
+    font-size: 12px !important;
+  }
+  .responsive-active-cupons .cupons-container .right-cupon-area .play-btn {
+    width: 50%;
+    height: 40px;
+  }
+  .left-cupon-area {
+    width: 100%;
+  }
+  .responsive-active-cupons .cupons-container .left-cupon-area {
+    width: 100%;
+  }
+  .responsive-active-cupons .cupons-container .right-cupon-area {
+    width: 100%;
+  }
+}/*# sourceMappingURL=responsiveactivecups.css.map */

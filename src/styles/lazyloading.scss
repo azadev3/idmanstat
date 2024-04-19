@@ -1,0 +1,382 @@
+@import './global.scss';
+
+$lazybackground: rgba(255, 255, 255, 0.034);
+$lazybackcountry: rgba(220, 220, 248, 0.5);
+
+@mixin opacityanim {
+     animation: opacity 0.5s ease-out alternate infinite;
+     @keyframes opacity {
+          0% { opacity: 0; }
+          10% { opacity: 10%; }
+          20% { opacity: 20%; }
+          30% { opacity: 30%; }
+          40% { opacity: 40%; }
+          50% { opacity: 50%; }
+          60% { opacity: 60%; }
+          70% { opacity: 70%; }
+          80% { opacity: 80%; }
+          90% { opacity: 90%; }
+          100% { opacity: 100%; }
+     }
+}
+
+.lazyloading-container {
+     width: 100%;
+     min-height: 35rem;
+     background-color: #222031;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .left-skeleton {
+          background-color: $lazybackground;
+          border-radius: 30px;
+          padding: 1.5rem;
+          animation: opacity 1s ease-out alternate infinite;
+          width: 20%;
+          height: 80vh;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          .input-skeleton {
+               width: 80%;
+               height: 70px;
+               @include flex;
+               input {
+                    width: 100%;
+                    height: 35px;
+                    border-radius: 10px;
+                    border: none;
+                    outline: none;
+                    background-color: $lazybackground;
+               }
+          }
+
+          .links-skeleton {
+               width: 100%;
+               height: 100%;
+               display: flex;
+               align-items: flex-start;
+               justify-content: center;
+               ul li {
+                    width: 220px;
+                    height: 35px;
+                    margin: 0.9rem;
+                    padding: 7px 60px;
+                    background-color: $lazybackground;
+                    list-style: none;
+                    border-radius: 20px;
+
+               }
+          }
+
+          @keyframes opacity {
+               0% { opacity: 0; }
+               10% { opacity: 10%; }
+               20% { opacity: 20%; }
+               30% { opacity: 30%; }
+               40% { opacity: 40%; }
+               50% { opacity: 50%; }
+               60% { opacity: 60%; }
+               70% { opacity: 70%; }
+               80% { opacity: 80%; }
+               90% { opacity: 90%; }
+               100% { opacity: 100%; }
+          }
+     }
+
+     .center-skeleton {
+          @include opacityanim();
+          width: 40%;
+          height: 80vh;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          .title {
+               margin-top: 1rem;
+               width: 90%;
+               height: 100px;
+               background-color: $lazybackground;
+               border-radius: 30px;
+               display: flex;
+               align-items: flex-start;
+               justify-content: flex-start;
+               flex-direction: column;
+               li {
+                    margin-left: 3rem;
+                    list-style-type: none;
+                    width: 200px;
+                    height: 10px;
+                    background-color: #cecece17;
+                    border-radius: 10px;
+                    margin-top: 0.5rem;
+               }
+               #tit1 {
+                    width: 350px;
+                    height: 15px;
+               }
+          }
+
+          .container {
+               margin-top: 2rem;
+               width: 85%;
+               height: 100%;
+               background-color: $lazybackground;
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+               flex-direction: column;
+               border-radius: 30px;
+               .list {
+                    width: 90%;
+                    height: 50px;
+                    background-color: $lazybackground;
+                    margin-top: 1rem;
+                    border-radius: 30px;
+               }
+          }
+     }
+
+     .right-skeleton {
+          @include flex;
+          flex-direction: column;
+          width: 20%;
+          height: 80vh;
+          background-color: $lazybackground;
+          border-radius: 30px;
+          @include opacityanim();
+          .list {
+               width: 90%;
+               height: 50px;
+               background-color: $lazybackground;
+               margin-top: 1rem;
+               border-radius: 30px;
+          }
+     }
+
+}
+
+.lazy-loading-games {
+     width: 100%;
+     height: 150rem;
+     background-color: $lazybackground;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     .container-skeleton {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+
+     .content {
+          width: 100%;
+          height: 800px;
+          
+          .header-skeleton {
+               background-color: rgba(86, 14, 255, 0.089);
+               border-radius: 10px;
+               width: 500px;
+               height: 55px;
+               display: flex;
+               margin-top: 1rem;
+               align-items: flex-start;
+               justify-content: center;
+               flex-direction: column;
+               span {
+                    width: 300px;
+                    height: 20px;
+                    background-color: rgba(86, 14, 255, 0.089);
+                    margin-top: 0.2rem;
+                    margin-left: 1rem;
+                    border-radius: 10px;
+                    @include opacityanim();
+               }
+          }
+
+          .section {
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+               flex-direction: column;
+               margin-top: 1rem;
+               border-radius: 20px;
+               width: 100%;
+               height: 300px;
+               background-color: rgba(86, 14, 255, 0.089);
+               .title {
+                    width: 85%;
+                    height: 15px;
+                    background-color: rgba(86, 14, 255, 0.089);
+                    margin-top: 0.8rem;
+                    border-radius: 30px;
+                    @include opacityanim();
+               }
+          }
+     }
+
+     }
+}
+
+.lazy-loading-countries {
+     @include opacityanim();
+     user-select: none;
+     pointer-events: none;
+     width: 100%;
+     height: 100%;
+     background-color: $lazybackcountry;
+     margin-right: 5rem;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+     border-radius: 20px;
+
+     li {
+          width: 225px;
+          height: 35px;
+          background-color: #22203128;
+          border-radius: 10px;
+          margin-top: 1rem;
+          list-style-type: none;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-evenly;
+          #none2 {
+               @include opacityanim();
+               width: 20px;
+               height: 20px;
+               position: relative;
+               bottom: 0.5rem;
+          }
+          #list {
+               @include opacityanim();
+               width: 100px;
+               height: 20px;
+               background-color: #22203128;
+               position: relative;
+               bottom: 0.5rem;
+          }
+     }
+}
+
+.lazy-loading-teams {
+     width: 90%;
+     height: 100%;
+     background-color: #0a0a0a00;
+     display: flex;
+     align-items: flex-start;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+     overflow: hidden;
+     border-radius: 20px;
+     div {
+          width: 120px;
+          height: 120px;
+          background-color: rgba(86, 14, 255, 0.363);
+          margin: 0.8rem;
+          border-radius: 20%;
+          animation: color 0.3s ease-out alternate infinite;
+          @keyframes color {
+               from {
+                    background-color: rgba(218, 214, 9, 0.795)
+               }
+               to {
+                    background-color: rgba(86, 14, 255, 0.089)
+               }
+          }
+     }
+}
+
+.lazyloading-teams {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;     
+     overflow-y: auto;
+     div {
+          width: 110px;
+          height: 110px;
+          margin: 1rem;
+          background-color: #150a6b25;
+          border-radius: 10px;
+          @include flex;
+          flex-direction: column;
+
+          #img {
+               width: 45px;
+               height: 45px;
+               background-color: rgba(117, 109, 165, 0.459);
+               border-radius: 50%;
+               @include opacityanim();
+          }
+
+          #field {
+               width: 80px;
+               height: 10px;
+               background-color: #00000025;
+               border-radius: 5px;
+               @include opacityanim();
+          }
+          
+          #field2 {
+               margin-top: 0.5rem;
+               width: 90px;
+               height: 10px;
+               background-color: #00000025;
+               border-radius: 5px;
+               @include opacityanim();
+          }
+          
+     }
+     
+}
+
+.animation-container {
+     width: 100%;
+     min-height: 400px;
+     @include flex;
+     .imgwrap {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          background-color: #c2c2c200;
+          @include flex;
+          border-radius: 50%;
+          border: 10px solid rgb(49, 51, 51);
+          border-right-color: #8e75ff;
+          animation: borderanim 0.7s ease-out forwards infinite;
+          @keyframes borderanim {
+               0% {
+                    border-right-color: transparent;
+               }
+               50% {
+                    border-bottom-color: #6853ca;
+               }
+               70% {
+                    border-left-color: #54bbff;
+               }
+               100% {
+                    border-top-color: #3bdb7091;
+               }
+          }
+
+          img {
+               padding: 1rem;
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               border-radius: 50%;
+               animation: imganim 2s ease-out forwards normal infinite;
+               @keyframes imganim {
+                    from {transform: rotate(0);}
+                    to {transform: rotate(360deg);}
+               }
+          }
+     }
+}

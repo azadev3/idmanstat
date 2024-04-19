@@ -1,0 +1,856 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-display: swap;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper,
+body .wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100vh;
+}
+html .wrapper-isPopup,
+body .wrapper-isPopup {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.emoji-modal-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 50%;
+  height: 330px;
+  position: relative;
+  margin-top: 0.5rem;
+  left: 45.5%;
+  border-radius: 15px;
+  background-color: #292744;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.emoji-modal-container .header {
+  border-bottom: 1px solid #f5ef44;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.emoji-modal-container .header span {
+  color: white;
+  font-size: 13px;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.emoji-modal-container .header #closeicon {
+  font-size: 2rem;
+  color: rgb(211, 77, 77);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.emoji-modal-container .header #closeicon:hover {
+  transform: scale(1.1);
+}
+.emoji-modal-container .header #closeicon:active {
+  transform: translateY(1px);
+}
+.emoji-modal-container .emojies {
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.emoji-modal-container .emojies .loading-anim {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emoji-modal-container .emojies .loading-anim #rectangle1 {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(36, 206, 112);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 0.5s forwards infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.emoji-modal-container .emojies span {
+  font-size: 1.7rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.emoji-modal-container .emojies span:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 8px;
+  background-color: rgb(47, 42, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: mediumslateblue;
+}
+
+.add-tipmodal-container {
+  width: 24%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 55px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  z-index: 10000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  animation: right_to_left 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards normal;
+}
+@keyframes right_to_left {
+  from {
+    transform: translateX(20rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+.add-tipmodal-container .header-add-tipmodal {
+  width: 100%;
+  height: 65px;
+  background-color: #292744;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.add-tipmodal-container .header-add-tipmodal #lefticon {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.1s ease-out;
+}
+.add-tipmodal-container .header-add-tipmodal #lefticon:hover {
+  background-color: #fff;
+  color: black;
+}
+.add-tipmodal-container .header-add-tipmodal span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+.add-tipmodal-container .header-add-tipmodal #closemodalicon {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.1s ease-out;
+}
+.add-tipmodal-container .header-add-tipmodal #closemodalicon:hover {
+  background-color: white;
+  color: black;
+}
+.add-tipmodal-container .header-add-tipmodal #closemodalicon:active {
+  transform: translateY(1px);
+}
+.add-tipmodal-container .search-area {
+  margin-top: 1rem;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .search-area .input-search {
+  width: 90%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.add-tipmodal-container .search-area .input-search input[type=search] {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  background-color: yellow;
+  font-weight: 500;
+  color: #292744;
+  font-size: 14px;
+}
+.add-tipmodal-container .search-area .input-search input[type=search]::-moz-placeholder {
+  color: #706e82 !important;
+}
+.add-tipmodal-container .search-area .input-search input[type=search]::placeholder {
+  color: #706e82 !important;
+}
+.add-tipmodal-container .search-area .input-search #searchicon {
+  position: absolute;
+  left: 0.7rem;
+  font-size: 1.5rem;
+  color: #706e82;
+}
+.add-tipmodal-container .popular-lig-container {
+  width: 100%;
+  height: 80.5%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .popular-lig-container .toptitle {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.add-tipmodal-container .popular-lig-container .toptitle span {
+  color: #292744;
+  font-weight: 700;
+  font-size: 17px;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .title {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .title span {
+  margin-left: 1rem;
+  font-size: 12.5px;
+  color: #706e82;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs {
+  width: 100%;
+  height: 429px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list {
+  width: 91%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .list-ligs {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .list-ligs img {
+  width: 7%;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .list-ligs span {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 0.3rem;
+  color: #292744;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .list-ligs:hover {
+  background-color: rgb(255, 255, 124);
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .dont-result-msg {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .popular-lig-container .ligs-content .ligs .list .dont-result-msg span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+  color: #292744;
+  animation: opacity 1s ease-out alternate infinite;
+}
+.add-tipmodal-container .popular-lig-container ::-webkit-scrollbar {
+  display: none;
+}
+.add-tipmodal-container .selected-league-container {
+  width: 100%;
+  height: 80.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name {
+  width: 90%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .image-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .image-wrapper img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .name-and-type {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .name-and-type span {
+  margin-left: 1rem;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .name-and-type #type {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6f8caa;
+}
+.add-tipmodal-container .selected-league-container .selected-league-name .name-and-type #selected-league {
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  color: #292744;
+}
+.add-tipmodal-container .selected-league-container .match-status {
+  width: 100%;
+  height: 415px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area {
+  width: 90%;
+  height: auto;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .date-header {
+  width: 100%;
+  height: 30px;
+  background-color: #ffee00;
+  display: flex;
+  align-items: center;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .date-header span {
+  margin-left: 0.7rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #303030;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #ffee00;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .matchtime {
+  width: 70px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .matchtime span {
+  color: #706e82;
+  font-size: 13px;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .teams {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .teams div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .teams div span {
+  margin-left: 0.7rem;
+  font-size: 13.5px;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .teams div .img-wrapper {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area .matchs .teams div .img-wrapper img {
+  margin-left: 0.5rem;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.add-tipmodal-container .selected-league-container .match-status .match-area:hover {
+  background-color: rgba(255, 238, 0, 0.3568627451);
+}
+.add-tipmodal-container .match-informations-container {
+  width: 100%;
+  height: 89.7%;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .information-header {
+  width: 100%;
+  min-height: 200px;
+  background-image: url(/stadium.svg);
+  background-position: center;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamleft-info,
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamright-info {
+  word-break: break-all;
+  overflow: hidden;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamleft-info .teamlogo-wrapper,
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamright-info .teamlogo-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamleft-info .teamlogo-wrapper img,
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamright-info .teamlogo-wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamleft-info span,
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamright-info span {
+  text-align: center;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: -0.3px;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamstatus-info {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamstatus-info .after-time {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamstatus-info .after-time span {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamstatus-info .time {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .information-header .teams-header .teamstatus-info .time span {
+  color: #fff;
+  font-size: 12px;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section {
+  width: 100%;
+  height: 60px;
+  margin-top: 1rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .all-match,
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .first-half,
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .second-half {
+  width: 35%;
+  height: 43px;
+  border: 1px solid #f7e70e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .all-match span,
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .first-half span,
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .second-half span {
+  font-size: 13px;
+  word-break: normal;
+  font-weight: 500;
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .all-match:hover {
+  background-color: rgba(255, 238, 0, 0.5411764706);
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .first-half:hover {
+  background-color: rgba(255, 238, 0, 0.5411764706);
+}
+.add-tipmodal-container .match-informations-container .match-bottom-informations .odds-section .odds .second-half:hover {
+  background-color: rgba(255, 238, 0, 0.5411764706);
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds {
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: 0.1s ease-out;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content .accordion-header {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+  min-height: 45px;
+  background-color: #ffee00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content .accordion-header span {
+  color: #303030;
+  font-size: 13.6px;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content .accordion-header #open-the-accordion,
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content .accordion-header #close-the-accordion {
+  color: #292744;
+  font-size: 1rem;
+  margin-right: 1rem;
+  animation: transformed_icon 0.2s ease-out forwards normal;
+}
+@keyframes transformed_icon {
+  from {
+    transform: rotate(160deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .accordion-content .accordion-header:hover {
+  background-color: #fff671;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion {
+  background-color: rgba(42, 39, 68, 0.062745098);
+  border-bottom: 1px solid rgba(41, 39, 68, 0.3137254902);
+  min-height: 100px;
+  transition: 0.1s ease-out all;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title {
+  width: 80%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 {
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  width: 80px;
+  height: 50px;
+  border: 1px solid rgba(206, 206, 206, 0.662745098);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: transform 0.2s ease-out forwards normal;
+}
+@keyframes transform {
+  from {
+    transform: translateY(-1.7rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home button, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x button, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2 button, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home button, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x button, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #292744;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.1s ease-out;
+  background-color: #f7e70e;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home button:active, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x button:active, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2 button:active, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home button:active, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x button:active, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 button:active {
+  transform: translateY(2px);
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home button:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x button:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2 button:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home button:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x button:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 button:hover {
+  background: rgba(247, 232, 14, 0.2549019608);
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home .activeodd, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x .activeodd, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2 .activeodd, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home .activeodd, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x .activeodd, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 .activeodd {
+  background-color: #3bc564;
+  color: #fff;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-home .activeodd:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-x .activeodd:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-wrapper .odds-2 .activeodd:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home .activeodd:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x .activeodd:hover, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 .activeodd:hover {
+  background-color: #3bc564;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title {
+  width: 80%;
+  height: 50px;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 {
+  margin-bottom: 0;
+  cursor: auto;
+  border: none;
+  height: 30px !important;
+  background-color: transparent;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home span, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x span, .add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2 span {
+  font-size: 12.7px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-home:hover {
+  background: transparent;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-x:hover {
+  background: transparent;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .according-main .odds-title .odds-2:hover {
+  background: transparent;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .title span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6f8caa;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .title :nth-child(2) {
+  margin-right: 2rem;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.1s ease-out;
+  animation: transform 0.3s ease-out forwards normal;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals span {
+  font-weight: 500;
+  color: #292744;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #292744;
+  transition: 0.1s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+  background-color: #f7e70e;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals button:hover {
+  background-color: rgba(247, 232, 14, 0.2549019608);
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals button:hover {
+  background-color: rgba(247, 232, 14, 0.2549019608);
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals .activeodd {
+  background-color: #3bc564;
+  color: #fff;
+}
+.add-tipmodal-container .match-informations-container .navigation-on-odds .active-accordion .goals-container .odds-section-on-goals .activeodd:hover {
+  background-color: #3bc564;
+}
+.add-tipmodal-container .match-informations-container ::-webkit-scrollbar {
+  display: none;
+}
+.add-tipmodal-container ::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=addtipmodal.css.map */

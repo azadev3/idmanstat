@@ -1,0 +1,113 @@
+@import '../global.scss';
+
+.events-container {
+     width: 100%;
+     min-height: 150px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+     
+     .firsthalf-results, .secondhalf-results {
+          width: 100%;
+          margin-top: 0.5rem;
+          min-height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          .firsthalfhead, .secondhalfhead {
+               width: 100%;
+               min-height: 30px;
+               @include flex;
+               span {
+                    width: 100%;
+                    height: auto;
+                    @include flex;
+                    padding: 5px 15px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    background-color: whitesmoke;
+               }
+          }
+
+          .firsthalf-contents, .secondhalf-contents {
+               width: 100%;
+               height: auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+               .statuses-on-users {
+                    width: 100%;
+                    @include flex;
+                    margin-top: 0.7rem;
+                    background-color: whitesmoke;
+                    .home{
+                         position: relative;
+                         width: 50%;
+                         height: auto;
+                         display: flex;
+                         align-items: center;
+                         justify-content: flex-start;
+                         span {
+                              font-size: 11px;
+                              font-weight: 500;
+                              padding-left: 0.7rem;
+                         }
+                         img {
+                              width: 15px;
+                              height: 15px;
+                              margin-bottom: 1rem;
+                         }
+                         #minutes {
+                              font-weight: 700;
+                         }
+                    }
+                    .away {
+                         width: 50%;
+                         height: auto;
+                         display: flex;
+                         align-items: center;
+                         justify-content: flex-end;
+                         span {
+                              font-size: 11px;
+                              font-weight: 500;
+                              padding-right: 0.7rem;
+                         }
+                         img {
+                              width: 15px;
+                              height: 15px;
+                              margin-bottom: 1rem;
+                         }
+                         #minutes {
+                              font-weight: 700;
+                         }
+                    }
+                    
+               }
+          }
+     }
+}
+
+.tooltip-wrapper {
+     position: absolute;
+     left: 18rem;
+     top: 0.4rem;
+     z-index: 10000;
+     width: 200px;
+     min-height: 20px;
+     background-color: gold;
+     border-radius: 7px;
+     @include flex;
+     animation: scaled 0.2s ease-out forwards normal;
+     @keyframes scaled {
+          from {transform: scale(0.3);}
+          to {transform: scale(1.0);}
+     }
+     span {
+          font-size: 10px;
+          font-weight: 500;
+          color: #000;
+     }
+}

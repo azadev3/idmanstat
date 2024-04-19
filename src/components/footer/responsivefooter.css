@@ -1,0 +1,299 @@
+.responsive-footer-component {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  background-color: #292744;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive {
+  width: 98%;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box,
+.responsive-footer-component .footer-container-responsive .fast-links-box,
+.responsive-footer-component .footer-container-responsive .news-box,
+.responsive-footer-component .footer-container-responsive .contact-box {
+  width: 25%;
+  min-height: 290px;
+  background-color: #292744;
+  margin-left: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .title,
+.responsive-footer-component .footer-container-responsive .fast-links-box .title,
+.responsive-footer-component .footer-container-responsive .news-box .title,
+.responsive-footer-component .footer-container-responsive .contact-box .title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .title span,
+.responsive-footer-component .footer-container-responsive .fast-links-box .title span,
+.responsive-footer-component .footer-container-responsive .news-box .title span,
+.responsive-footer-component .footer-container-responsive .contact-box .title span {
+  color: #fff;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .content,
+.responsive-footer-component .footer-container-responsive .fast-links-box .content,
+.responsive-footer-component .footer-container-responsive .news-box .content,
+.responsive-footer-component .footer-container-responsive .contact-box .content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .content p,
+.responsive-footer-component .footer-container-responsive .fast-links-box .content p,
+.responsive-footer-component .footer-container-responsive .news-box .content p,
+.responsive-footer-component .footer-container-responsive .contact-box .content p {
+  color: rgba(255, 255, 255, 0.4392156863);
+  font-size: 11px;
+  margin-top: 1rem;
+  padding: 7px;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .links,
+.responsive-footer-component .footer-container-responsive .fast-links-box .links,
+.responsive-footer-component .footer-container-responsive .news-box .links,
+.responsive-footer-component .footer-container-responsive .contact-box .links {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .links #links-in-footer,
+.responsive-footer-component .footer-container-responsive .fast-links-box .links #links-in-footer,
+.responsive-footer-component .footer-container-responsive .news-box .links #links-in-footer,
+.responsive-footer-component .footer-container-responsive .contact-box .links #links-in-footer {
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4392156863);
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box .wrapper-one,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box .wrapper-one,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box .wrapper-one,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box .wrapper-one {
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box .wrapper-one .img-wrapper,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box .wrapper-one .img-wrapper,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box .wrapper-one .img-wrapper,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box .wrapper-one .img-wrapper {
+  width: 70px;
+  height: auto;
+  background-color: red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box .wrapper-one .img-wrapper img,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box .wrapper-one .img-wrapper img,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box .wrapper-one .img-wrapper img,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box .wrapper-one .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box .wrapper-one .texts,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box .wrapper-one .texts,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box .wrapper-one .texts,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box .wrapper-one .texts {
+  width: 100%;
+  height: auto;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contents-in-news-box .wrapper-one .texts span,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contents-in-news-box .wrapper-one .texts span,
+.responsive-footer-component .footer-container-responsive .news-box .contents-in-news-box .wrapper-one .texts span,
+.responsive-footer-component .footer-container-responsive .contact-box .contents-in-news-box .wrapper-one .texts span {
+  text-decoration: none;
+  margin-top: 0.2rem;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4392156863);
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .location,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .mail,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .location,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location span,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone span,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail span,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location span,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone span,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail span,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .location span,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone span,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .mail span,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .location span,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone span,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail span {
+  margin-top: 1rem;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.4392156863);
+  position: relative;
+  left: 0.4rem;
+}
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location #contact-icons,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone #contact-icons,
+.responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail #contact-icons,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location #contact-icons,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone #contact-icons,
+.responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail #contact-icons,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .location #contact-icons,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone #contact-icons,
+.responsive-footer-component .footer-container-responsive .news-box .contact-content .mail #contact-icons,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .location #contact-icons,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone #contact-icons,
+.responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail #contact-icons {
+  color: #fff;
+  font-size: 2rem;
+}
+.responsive-footer-component .footer-foot {
+  width: 100%;
+  min-height: 50px;
+  background-color: #272a2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.responsive-footer-component .footer-foot .left, .responsive-footer-component .footer-foot .right {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.responsive-footer-component .footer-foot .left img, .responsive-footer-component .footer-foot .right img {
+  width: 130px;
+  height: auto;
+}
+.responsive-footer-component .footer-foot .left span, .responsive-footer-component .footer-foot .right span {
+  margin-left: 0.5rem;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4392156863);
+}
+.responsive-footer-component .footer-foot .left #idmanstat-priv, .responsive-footer-component .footer-foot .right #idmanstat-priv {
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+}
+
+@media only screen and (max-width: 568px) and (min-width: 368px) {
+  .responsive-footer-component .footer-container-responsive {
+    flex-direction: column;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box, .responsive-footer-component .footer-container-responsive .fast-links-box, .responsive-footer-component .footer-container-responsive .news-box, .responsive-footer-component .footer-container-responsive .contact-box {
+    width: 100%;
+    min-height: 150px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .news-box .contact-content .location, .responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .news-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .location, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box .content, .responsive-footer-component .footer-container-responsive .fast-links-box .content, .responsive-footer-component .footer-container-responsive .news-box .content, .responsive-footer-component .footer-container-responsive .contact-box .content {
+    align-items: flex-start;
+  }
+  .responsive-footer-component .footer-foot {
+    margin-top: 3rem;
+  }
+  .responsive-footer-component .footer-foot * {
+    font-size: 10px !important;
+    text-wrap: nowrap;
+  }
+  .responsive-footer-component .footer-foot {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 368px) and (min-width: 168px) {
+  .responsive-footer-component .footer-container-responsive {
+    flex-direction: column;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box, .responsive-footer-component .footer-container-responsive .fast-links-box, .responsive-footer-component .footer-container-responsive .news-box, .responsive-footer-component .footer-container-responsive .contact-box {
+    width: 100%;
+    min-height: 150px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .location, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .about-our-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .location, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .fast-links-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .news-box .contact-content .location, .responsive-footer-component .footer-container-responsive .news-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .news-box .contact-content .mail, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .location, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .telephone, .responsive-footer-component .footer-container-responsive .contact-box .contact-content .mail {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+  .responsive-footer-component .footer-container-responsive .about-our-box .content, .responsive-footer-component .footer-container-responsive .fast-links-box .content, .responsive-footer-component .footer-container-responsive .news-box .content, .responsive-footer-component .footer-container-responsive .contact-box .content {
+    align-items: flex-start;
+  }
+  .responsive-footer-component .footer-foot {
+    margin-top: 3rem;
+  }
+  .responsive-footer-component .footer-foot * {
+    font-size: 10px !important;
+    text-wrap: nowrap;
+  }
+  .responsive-footer-component .footer-foot {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=responsivefooter.css.map */

@@ -1,0 +1,206 @@
+@import '../global.scss';
+
+.fixture-modal-container {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+     width: 60%;
+     height: 620px;
+     background-color: white;
+     border-radius: 2px;
+
+     .top-header-in-fixture-modal {
+          width: 100%;
+          height: 30px;
+          border-bottom: 1px solid rgba(170, 170, 170, 0.199);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+               margin-left: 1rem;
+               font-size: 13.5px;
+               font-weight: 500;
+          }
+
+          #close-icon {
+               margin-right: 0.5rem;
+               font-size: 2.2rem;
+               cursor: pointer;
+               transition: 0.1 ease-out;
+          }
+          #close-icon:hover {color: red;}
+     }
+
+     .content-main {
+          width: 100%;
+          height: 590px;
+          background-color: #fff;
+          overflow-y: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          .match-header {
+               width: 100%;
+               height: 30px;
+               display: flex;
+               align-items: center;
+               background-color: rgb(255, 228, 77);
+               justify-content: space-between;
+               margin-top: 1rem;
+
+               .ligname {
+                    width: 70%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    .imgwrapper {
+                         width: 25px;
+                         height: 25px;
+                         position: relative;
+                         @include flex;
+                         margin-left: 1rem;
+                         img {
+                              position: absolute;
+                              width: 100%;
+                              height: 100%;
+
+                         }
+                    }
+
+                    span {
+                         margin-left: 0.5rem;
+                         font-size: 14px;
+                    }
+               }
+
+               span {
+                    margin-right: 1rem;
+                    font-size: 14px;
+                    
+               }
+          }
+
+          .head-to-head-container {
+               width: 100%;
+               min-height: 230px;
+               background-color: #ffffff;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+
+               .left-team, .right-team {
+                    width: 30%;
+                    height: 100%;
+                    @include flex;
+                    flex-direction: column;
+                    .img-wrapper {
+                         width: 100px;
+                         height: 100px;
+                         position: relative;
+                         @include flex;
+                         img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: contain;
+                              position: absolute;
+                         }
+                    }
+                    span {
+                         font-size: 14px;
+                         font-weight: 600;
+                         margin-top: 0.5rem;
+                    }
+               }
+
+               .results {
+                    width: 40%;
+                    height: 100%;
+                    @include flex;
+                    flex-direction: column;
+                    #date-and-hour { 
+                         width: 100%;
+                         min-height: 30px;
+                         @include flex;
+                         font-size: 13px;
+                         font-weight: 500;
+                    }
+
+                    #match-result {
+                         font-size: 3.5rem;
+                         color: rgb(184, 160, 24);
+                         width: 100%;
+                         height: auto;
+                         @include flex;
+                    }
+
+                    #matchstatus {
+                         font-size: 14px;
+                         width: 100%;
+                         min-height: 25px;
+                         @include flex;
+                         font-weight: 500;
+                         background-color: #FFE44D;
+                         border-radius: 5px;
+                    }
+
+                    #stadiumname {
+                         font-size: 11px;
+                         letter-spacing: -0.5px;
+                         width: 100%;
+                         height: 30px;
+                         @include flex; 
+                         font-weight: 500;
+                         color: #101010;
+                    }
+               }
+ 
+          }
+
+          .navigators {
+               width: 100%;
+               min-height: 35px;
+               background-color: whitesmoke;
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+               .navs-in-fixtures {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    list-style-type: none;
+                    li {
+                         margin: 0.2rem;
+                         font-size: 12.5px;
+                         font-weight: 500;
+                         color: #303030;
+                         background-color: #FFE44D;
+                         padding: 4px 10px;
+                         border-radius: 4px;
+                         cursor: pointer;
+                         transition: 0.1s ease-out;
+                         user-select: none;
+                    }
+                    li:hover {
+                         background-color: #292744;
+                         color: white;
+                    }
+                    li:active {transform: translateY(2px);}
+
+                    .active-link {
+                         background-color: #292744;
+                         color: #fff;
+                    }
+                    .active-link:hover {background-color: #292744; color: #fff;}
+               }
+          }
+     }
+}
+
+.fixture-modal-container {
+     ::-webkit-scrollbar {
+          width: 3px;
+          background-color: goldenrod;
+     }
+}

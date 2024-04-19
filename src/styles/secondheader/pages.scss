@@ -1,0 +1,14 @@
+//second header pages styles
+@import '../global.scss';
+
+.wrapper-basketball, .wrapper-basketball, .wrapper-tennis, .wrapper-volleyball, .wrapper-handball {
+     width: 100%;
+     height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+     @include topNavigationTitleStyle();
+}
+
+ 
